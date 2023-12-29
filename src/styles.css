@@ -1,1 +1,180 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+
+:root {
+  --primary: white;
+  --primary90: rgba(255, 255, 255, 0.9);
+  --primary80: rgba(255, 255, 255, 0.8);
+  --primary70: rgba(255, 255, 255, 0.7);
+  --primary30: rgba(255, 255, 255, 0.3);
+  --secondary: aquamarine;
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #222;
+  --bg-tertiary: #333;
+  --layout-padding: 2rem;
+  --slider-handle-diameter: 1.6rem;
+  --button-height: 2.6rem;
+  --button-radius: 0.5rem;
+  --nav-sel-thickness: 2px;
+}
+
+* {
+  box-sizing: border-box;
+  color: var(--primary);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+}
+
+body::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.title {
+  padding-left: var(--layout-padding);
+  padding-top: calc(var(--layout-padding) / 2);
+  padding-bottom: calc(var(--layout-padding) / 2);
+}
+
+h1 {
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8svh;
+}
+
+.shortcuts {
+  padding: var(--layout-padding);
+}
+
+.container-shortcut {
+  font-size: 0.8rem;
+  /* display: flex; */
+  gap: 1svw;
+  & b {
+    width: 10svw;
+  }
+}
+
+input {
+  background-color: var(--bg-secondary);
+  font-family: 'Inconsolata', sans-serif;
+  font-size: 1rem;
+}
+
+.container-button {
+  width: 49%;
+  & input {
+    color: var(--bg-primary);
+    border: 1px solid var(--primary);
+    height: var(--button-height);
+    width: 100%;
+    padding-left: var(--layout-padding);
+    padding-right: var(--layout-padding);
+    border-radius: var(--button-radius);
+    background-color: var(--primary90);
+  }
+}
+
+input[type='button']:hover {
+  font-weight: 300;
+  color: (var(--primary));
+  border: 1px solid var(--secondary);
+  background-color: var(--bg-secondary);
+}
+
+input[type='button']:active {
+  background-color: var(--bg-tertiary);
+  color: var(--primary);
+}
+
+input[type='button'] {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  flex-grow: 1;
+  text-align: center;
+  padding: calc(var(--layout-padding) / 4);
+  border-radius: var(--button-radius);
+  background-color: var(--bg-secondary);
+  & h3 {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  & div {
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 850px) {
+}
+
+@media screen and (max-width: 600px) {
+}
