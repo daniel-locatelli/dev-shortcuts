@@ -109,7 +109,7 @@ export class VscodeComponent {
     { key: 'Ctrl + K  F', command: 'Close folder' },
     { key: 'Ctrl + \\', command: 'Split editor' },
     { key: 'Ctrl + 1 / 2 / 3', command: 'Ctrl +  1 / 2 / 3 Focus into 1st, 2nd or 3rd editor group' },
-    { key: 'Ctrl + K Ctrl +  ←/→', command: 'Focus into previous/next editor group' },
+    { key: 'Ctrl + K  Ctrl + ← / →', command: 'Focus into previous/next editor group' },
     { key: 'Ctrl + Shift + PgUp / PgDn', command: 'Move editor left/right' },
     { key: 'Ctrl + K ← / →', command: 'Move active editor group' },
   ];
@@ -158,7 +158,6 @@ export class VscodeComponent {
     { key: 'Ctrl + K  Ctrl + I', command: 'Show hover' },
   ];
   
-  //Stopped here
   integratedTerminal: Shortcut[] = [
     { key: 'Ctrl + `', command: 'Show integrated terminal' },
     { key: 'Ctrl + Shift + `', command: 'Create new terminal' },
