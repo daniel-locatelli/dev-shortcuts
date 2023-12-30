@@ -1,6 +1,6 @@
 type Shortcut = {
-    Keybinding: string;
-    Command: string;
+    key: string;
+    command: string;
     When?: string;
     Source?: string;
 }
