@@ -88,6 +88,7 @@ li {
 }
 
 .home {
+  padding: var(--layout-padding);
   width: 100%;
   display: flex;
   justify-content: center;

@@ -1,11 +1,12 @@
 /* The .home configuration is at the styles.css on the root folder */
 
 p {
+  text-align: center;
   font-size: 24px;
 }
 
 .container-logo {
-  width: clamp(100px, 20svw, 25svw);
+  width: clamp(200px, 20svw, 25svw);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +19,7 @@ p {
 
 .home-logo {
     width: clamp(100px, 20svw, 250px);
-    height: clamp(69px, 13.8svw, 276px);
+    height: clamp(100px, 13.8svw, 276px);
 }
 
 .description {
