@@ -56,45 +56,23 @@
         </g>
     </symbol>
     <symbol id="quickeys" viewBox="0 0 50 50" fill="none">
-        <g clip-path="url(#clip0_41_724)">
-            <path d="M12 9V7H38V9H41V12H43V38H41V41H38V43H12V41H9V38H7V12H9V9H12Z" stroke="white" stroke-width="2" />
-            <path
-                d="M3.00023 2.99998L2.99914 1L47.0002 1V2.99999L49.0001 3.00001L48.9998 47L46.9999 47L46.9999 49.0001H3.00007L3.00012 47L1 47L1.0001 2.99998H3.00023Z"
-                stroke="white" stroke-width="2" />
-            <rect x="6.00012" y="42" width="2" height="2" fill="white" />
-            <rect x="4.00012" y="44" width="2" height="2" fill="white" />
-            <rect x="4.00012" y="4.00003" width="2" height="2" fill="white" />
-            <rect x="6.00012" y="6.00003" width="2" height="2" fill="white" />
-            <rect x="44.0001" y="44" width="2" height="2" fill="white" />
-            <rect x="42.0001" y="42" width="2" height="2" fill="white" />
-            <rect x="44.0001" y="4.00003" width="2" height="2" fill="white" />
-            <rect x="42.0001" y="6.00003" width="2" height="2" fill="white" />
-            <path
-                d="M32.0001 20V28H30.0001V30H28.0001V32H20.0001V30H18.0001V20H20.0001V18H30.0001V20H32.0001ZM28.0001 20H22.0001V30H26.0001V28H24.0001V26H28.0001V20ZM30.0001 32V30H32.0001V32H30.0001Z"
-                fill="white" />
-        </g>
-    </symbol>
-    <symbol id="quickeys-small" viewBox="0 0 23 23" fill="none">
-        <g clip-path="url(#clip0_46_791)">
-            <path d="M1 1.5H1.5V1V0.5H21.5V1V1.5H22H22.5V21.5H22H21.5V22V22.5H1.5V22V21.5H1H0.5V1.5H1Z"
-                stroke="white" />
-            <path
-                d="M7 4.5H6.5V5V5.5H6H5.5V6V6.5H5H4.5V7V16V16.5H5H5.5V17V17.5H6H6.5V18V18.5H7H16H16.5V18V17.5H17H17.5V17V16.5H18H18.5V16V7V6.5H18H17.5V6V5.5H17H16.5V5V4.5H16H7Z"
-                stroke="white" />
-            <rect x="2" y="2" width="1" height="1" fill="white" />
-            <rect x="3" y="3" width="1" height="1" fill="white" />
-            <rect x="4" y="4" width="1" height="1" fill="white" />
-            <rect x="2" y="20" width="1" height="1" fill="white" />
-            <rect x="3" y="19" width="1" height="1" fill="white" />
-            <rect x="4" y="18" width="1" height="1" fill="white" />
-            <rect x="18" y="18" width="1" height="1" fill="white" />
-            <rect x="19" y="19" width="1" height="1" fill="white" />
-            <rect x="20" y="20" width="1" height="1" fill="white" />
-            <rect x="20" y="2" width="1" height="1" fill="white" />
-            <rect x="19" y="3" width="1" height="1" fill="white" />
-            <rect x="18" y="4" width="1" height="1" fill="white" />
-            <path d="M15 9V13H14V14H13V15H9V14H8V9H9V8H14V9H15ZM13 9H10V14H12V13H11V12H13V9ZM14 15V14H15V15H14Z"
-                fill="white" />
-        </g>
+        <path d="M41 44V45H43V44H41Z" fill="white" />
+        <path d="M43 45V46H45V45H43Z" fill="white" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M47.0002 1L2.99914 1L3.00022 2.99998H1.0001L1 47L3.00012 47L3.00007 49.0001H46.9999L46.9999 47L48.9998 47L49.0001 3.00001L47.0002 2.99999V1ZM48.0001 4L46.0002 3.99997V2L3.99968 2L4.00077 3.99998H2.0001L2 46L5 46V47H4.00012L4.00009 48.0001H45.9999L45.9999 47H45V46L47.9998 46L48.0001 4Z"
+            fill="white" />
+        <path d="M5 45V46H7V45H5Z" fill="white" />
+        <path d="M7 44V45H9V44H7Z" fill="white" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M11 7H39V9H42V10H43V12H44V40H42V43H41V44H39V45H11V44H9V43H8V40H6V12H7V10H8V9H11V7ZM12 8H38V10H41V13H43V39H41V42H38V44H12V42H9V39H7V13H9V10H12V8Z"
+            fill="white" />
+        <path d="M43 8H44V10H43V8Z" fill="white" />
+        <path d="M44 6H45V8H44V6Z" fill="white" />
+        <path d="M45 4H46V6H45V4Z" fill="white" />
+        <path d="M7 8H6V10H7V8Z" fill="white" />
+        <path d="M6 6H5V8H6V6Z" fill="white" />
+        <path d="M5 4H4V6H5V4Z" fill="white" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M29 18V16H21V18H18V34H21V36H29V38H34V33H32V18H29ZM28 20H22V32H28V20Z" fill="white" />
     </symbol>
 </svg>

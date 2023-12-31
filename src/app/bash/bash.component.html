@@ -1,1 +1,70 @@
-<h1>Bash in development 🔨</h1>
+<div class="table">
+  <h2>Navigation</h2>
+  <div class="row" *ngFor="let item of navigation">
+    <span>{{ item.key }}</span>
+    <span>{{ item.command }}</span>
+  </div>
+</div>
+<div class="table">
+  <h2>File Operations</h2>
+  <div class="row" *ngFor="let item of fileOperations">
+    <span>{{ item.key }}</span>
+    <span>{{ item.command }}</span>
+  </div>
+</div>
+<div class="table">
+  <h2>Text Manipulation</h2>
+  <div class="row" *ngFor="let item of textManipulation">
+    <span>{{ item.key }}</span>
+    <span>{{ item.command }}</span>
+  </div>
+</div>
+<div class="table">
+  <h2>File Viewing</h2>
+  <div class="row" *ngFor="let item of fileViewing">
+    <span>{{ item.key }}</span>
+    <span>{{ item.command }}</span>
+  </div>
+</div>
+<div class="table">
+  <h2>System Information</h2>
+  <div class="row" *ngFor="let item of systemInformation">
+    <span class="key">{{ item.key }} </span>
+    <span class="command">{{ item.command }}</span>
+  </div>
+</div>
+<div class="table">
+  <h2>Process Management</h2>
+  <div class="row" *ngFor="let item of processManagement">
+    <span>{{ item.key }}</span>
+    <span>{{ item.command }}</span>
+  </div>
+</div>
+<div class="table">
+  <h2>Networking</h2>
+  <div class="row" *ngFor="let item of networking">
+    <span>{{ item.key }}</span>
+    <span>{{ item.command }}</span>
+  </div>
+</div>
+<div class="table">
+  <h2>Permissions</h2>
+  <div class="row" *ngFor="let item of permissions">
+    <span>{{ item.key }}</span>
+    <span>{{ item.command }}</span>
+  </div>
+</div>
+<div class="table">
+  <h2>Compression And Archiving</h2>
+  <div class="row" *ngFor="let item of compressionAndArchiving">
+    <span>{{ item.key }}</span>
+    <span>{{ item.command }}</span>
+  </div>
+</div>
+<div class="table">
+  <h2>Shell Scripting</h2>
+  <div class="row" *ngFor="let item of shellScripting">
+    <span>{{ item.key }}</span>
+    <span>{{ item.command }}</span>
+  </div>
+</div>

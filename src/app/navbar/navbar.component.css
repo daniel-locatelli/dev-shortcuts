@@ -19,12 +19,9 @@ nav {
 
   li {
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
     padding-left: var(--nav-sel-thickness);
     & legend {
-      font-size: small;
-      /* margin-bottom: 16.8px; */
+      font-size: 0.6rem;
       padding-left: calc(0.4rem + var(--nav-sel-thickness));
     }
     & a {
