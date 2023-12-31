@@ -4,32 +4,35 @@
         <li title="Home" class="">
           <a routerLink="" class="logo">
             <svg class="icon">
-              <use xlink:href="assets/icons.svg#logo" />
+              <use xlink:href="assets/icons.svg#quickeys" />
             </svg>
           </a>
         </li>
-        <li title="Bash Commands" class="shortcut">
-          <a routerLink="bash" class="link" [class.active-nav]="isRouteActive('/bash')">
+        <li title="Bash Commands" class="shortcut" [class.active-nav]="isRouteActive('/bash')">
+          <legend>1</legend>
+          <a routerLink="bash" class="link">
             <svg class="icon">
               <use xlink:href="assets/icons.svg#bash" />
             </svg>
-            <span class="noselect">Bash ¹</span>
+            <span class="noselect">Bash</span>
           </a>
         </li>
-        <li title="Commands for Git" class="shortcut">
-          <a routerLink="git" class="link" [class.active-nav]="isRouteActive('/git')">
+        <li title="Commands for Git" class="shortcut" [class.active-nav]="isRouteActive('/git')">
+          <legend>2</legend>
+          <a routerLink="git" class="link">
             <svg class="icon">
               <use xlink:href="assets/icons.svg#git" />
             </svg>
-            <span class="noselect">git ²</span>
+            <span class="noselect">git</span>
           </a>
         </li>
-        <li title="Shortcuts for Visual Studio Code" class="shortcut">
-          <a routerLink="vscode" class="link" [class.active-nav]="isRouteActive('/vscode')">
+        <li title="Shortcuts for Visual Studio Code" class="shortcut" [class.active-nav]="isRouteActive('/vscode')">
+          <legend>3</legend>
+          <a routerLink="vscode" class="link">
             <svg class="icon">
               <use xlink:href="assets/icons.svg#vscode" />
             </svg>
-          <span class="noselect">VS Code ³</span>
+          <span class="noselect">VS Code</span>
         </a>
       </li>
       </ul>

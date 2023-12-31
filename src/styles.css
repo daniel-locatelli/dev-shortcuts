@@ -89,12 +89,19 @@ li {
 
 .home {
   padding: var(--layout-padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+}
+
+.container-home {
+  width: clamp(300px, 33svw, 45svw);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 8svh;
+  gap: 5svh;
 }
 
 .container-shortcuts {

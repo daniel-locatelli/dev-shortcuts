@@ -9,21 +9,21 @@ export const routes: Routes = [
     {
         path: '',
         component: HomeComponent,
-        title: 'Shortcuts'
+        title: 'Quickeys'
     },
     {
         path: 'bash',
         component: BashComponent,
-        title: 'Shortcuts | Bash'
+        title: 'Quickeys | Bash'
     },
     {
         path: 'git',
         component: GitComponent,
-        title: 'Shortcuts | git'
+        title: 'Quickeys | git'
     },
     {
         path: 'vscode',
         component: VscodeComponent,
-        title: 'Shortcuts | VS Code'
+        title: 'Quickeys | VS Code'
     }
 ];

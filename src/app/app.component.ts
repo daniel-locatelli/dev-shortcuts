@@ -24,7 +24,7 @@ export class AppComponent {
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     switch (event.key) {
-      case '0':
+      case 'q':
         this.router.navigate(['/']);;
         event.preventDefault();
         break;
