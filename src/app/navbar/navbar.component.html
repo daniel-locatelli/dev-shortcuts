@@ -8,14 +8,30 @@
             </svg>
           </a>
         </li>
-        <li title="Shortcuts for Visual Studio Code" class="shortcut">
-            <a routerLink="vscode" class="link">
-              <svg class="icon">
-                <use xlink:href="assets/icons.svg#vscode" />
-              </svg>
-            <span class="noselect">VS Code</span>
+        <li title="Bash Commands" class="shortcut">
+          <a routerLink="bash" class="link" [class.active-nav]="isRouteActive('/bash')">
+            <svg class="icon">
+              <use xlink:href="assets/icons.svg#bash" />
+            </svg>
+            <span class="noselect">Bash ¹</span>
           </a>
         </li>
+        <li title="Commands for Git" class="shortcut">
+          <a routerLink="git" class="link" [class.active-nav]="isRouteActive('/git')">
+            <svg class="icon">
+              <use xlink:href="assets/icons.svg#git" />
+            </svg>
+            <span class="noselect">git ²</span>
+          </a>
+        </li>
+        <li title="Shortcuts for Visual Studio Code" class="shortcut">
+          <a routerLink="vscode" class="link" [class.active-nav]="isRouteActive('/vscode')">
+            <svg class="icon">
+              <use xlink:href="assets/icons.svg#vscode" />
+            </svg>
+          <span class="noselect">VS Code ³</span>
+        </a>
+      </li>
       </ul>
     </nav>
   </header>

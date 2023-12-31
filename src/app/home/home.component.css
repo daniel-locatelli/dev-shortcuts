@@ -1,4 +1,4 @@
-/* The home configuration is at the styles.css on the root folder */
+/* The .home configuration is at the styles.css on the root folder */
 
 p {
   font-size: 24px;
@@ -11,7 +11,8 @@ p {
   align-items: center;
   justify-content: center;
   & h1 {
-    font-size: clamp(15px, 3svw, 37px);
+    padding-top: 0.5rem;
+    font-size: clamp(15px, 2.1svw, 37px);
   }
 }
 

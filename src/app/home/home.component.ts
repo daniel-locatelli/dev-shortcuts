@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   host: {
-    class: 'home'
+    class: 'home',
   }
 
 })

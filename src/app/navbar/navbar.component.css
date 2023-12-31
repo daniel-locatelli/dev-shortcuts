@@ -10,11 +10,11 @@ nav {
     padding-block-start: var(--layout-padding);
     padding-block-end: var(--layout-padding);
   }
-  
+
   ul {
     display: flex;
     flex-direction: column;
-    gap: clamp(6px, var(--layout-padding), var(--layout-padding));
+    gap: clamp(10px, calc(2*var(--layout-padding)), calc(2*var(--layout-padding)));
   }
   
   .logo {

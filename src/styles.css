@@ -97,9 +97,9 @@ li {
 }
 
 .container-shortcuts {
-  overflow-y: hidden;
-  width: 100%;
-  height: 100svh;
+  overflow-x: hidden;
+  width: 100svw;
+  /* height: 100svh; */
   -webkit-column-count: 5; /* Chrome, Safari, Opera */
   -moz-column-count: 5; /* Firefox */
   column-count: 5;
@@ -113,6 +113,19 @@ li {
   background-color: var(--bg-secondary);
 }
 
+.container-shortcuts::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0.2rem rgba(0, 0, 0, 0.3);
+  background-color: var(--bg-tertiary);
+}
+
+.container-shortcuts::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+.container-shortcuts::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+}
+
 .table + .table {
   margin-top: 1rem;
 }
@@ -121,8 +134,13 @@ li {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   padding-top: 0.1rem;
-  /* padding-bottom: 0.1rem; */
-  font-size: 0.75rem;
+  padding-left: 0.1rem;
+  font-size: clamp(0.5rem, 0.75rem, 1rem);
+  break-inside: avoid;
+}
+
+span + span {
+  padding-left: 0.5rem;
 }
 
 input {
@@ -189,11 +207,47 @@ input[type='button'] {
   }
 }
 
-@media screen and (max-width: 1200px) {
+.development {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  & > * {
+    text-align: center;
+    font-size: 36px;
+  }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1300px) {
+  .container-shortcuts {
+    -webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1100px) {
+  .container-shortcuts {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .container-shortcuts {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-shortcuts {
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+  }
 }
