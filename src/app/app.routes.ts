@@ -4,6 +4,9 @@ import { VscodeComponent } from './vscode/vscode.component';
 import { HomeComponent } from './home/home.component';
 import { GitComponent } from './git/git.component';
 import { BashComponent } from './bash/bash.component';
+import { WindowsComponent } from './windows/windows.component';
+import { ChromeComponent } from './chrome/chrome.component';
+import { ChromedevComponent } from './chromedev/chromedev.component';
 
 export const routes: Routes = [
     {
@@ -17,6 +20,11 @@ export const routes: Routes = [
         title: 'Quickeys | Bash'
     },
     {
+        path: 'windows',
+        component: WindowsComponent,
+        title: 'Quickeys | Windows'
+    },
+    {
         path: 'git',
         component: GitComponent,
         title: 'Quickeys | git'
@@ -25,5 +33,15 @@ export const routes: Routes = [
         path: 'vscode',
         component: VscodeComponent,
         title: 'Quickeys | VS Code'
+    },
+    {
+        path: 'chrome',
+        component: ChromeComponent,
+        title: 'Quickeys | Chrome'
+    },
+    {
+        path: 'chromedev',
+        component: ChromedevComponent,
+        title: 'Quickeys | Chrome Dev'
     }
 ];

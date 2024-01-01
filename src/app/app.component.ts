@@ -2,13 +2,11 @@ import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HomeComponent } from './home/home.component';
-import { VscodeComponent } from './vscode/vscode.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, HomeComponent, VscodeComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   // host: {
@@ -33,11 +31,23 @@ export class AppComponent {
         event.preventDefault();
         break;
       case '2':
-        this.router.navigate(['/git']);;
+        this.router.navigate(['/windows']);;
         event.preventDefault();
         break;
       case '3':
+        this.router.navigate(['/git']);;
+        event.preventDefault();
+        break;
+      case '4':
         this.router.navigate(['/vscode']);;
+        event.preventDefault();
+        break;
+      case '5':
+        this.router.navigate(['/chrome']);;
+        event.preventDefault();
+        break;
+      case '6':
+        this.router.navigate(['/chromedev']);;
         event.preventDefault();
         break;
     }

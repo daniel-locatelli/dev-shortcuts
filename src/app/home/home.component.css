@@ -18,8 +18,8 @@ p {
 }
 
 .home-logo {
-    width: clamp(100px, 20svw, 250px);
-    height: clamp(100px, 13.8svw, 276px);
+    width: clamp(100px, 10svw, 250px);
+    height: clamp(100px, 10svw, 250px);
 }
 
 .description {

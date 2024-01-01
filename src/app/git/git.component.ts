@@ -45,6 +45,7 @@ export class GitComponent {
     { key: 'git fetch <remote-name>', command: 'Fetch changes from a remote repository' },
     { key: 'git pull <remote-name> <branch-name>', command: 'Pull changes from a remote repository' },
     { key: 'git push <remote-name> <branch-name>', command: 'Push changes to a remote repository' },
+    {key: 'git remote -v', command: 'Show URL of remote branches'}
   ];
 
   inspectingChanges: Shortcut[] = [

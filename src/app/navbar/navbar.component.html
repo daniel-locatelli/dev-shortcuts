@@ -1,40 +1,67 @@
 <header>
-    <nav class="side-bar scroll-hide">
-      <ul>
-        <li title="Home" class="">
-          <a routerLink="" class="logo">
-            <svg class="icon">
-              <use xlink:href="assets/icons.svg#quickeys" />
-            </svg>
-          </a>
-        </li>
-        <li title="Bash Commands" class="shortcut" [class.active-nav]="isRouteActive('/bash')">
-          <legend>1</legend>
-          <a routerLink="bash" class="link">
-            <svg class="icon">
-              <use xlink:href="assets/icons.svg#bash" />
-            </svg>
-            <span class="noselect">Bash</span>
-          </a>
-        </li>
-        <li title="Commands for Git" class="shortcut" [class.active-nav]="isRouteActive('/git')">
-          <legend>2</legend>
-          <a routerLink="git" class="link">
-            <svg class="icon">
-              <use xlink:href="assets/icons.svg#git" />
-            </svg>
-            <span class="noselect">git</span>
-          </a>
-        </li>
-        <li title="Shortcuts for Visual Studio Code" class="shortcut" [class.active-nav]="isRouteActive('/vscode')">
-          <legend>3</legend>
-          <a routerLink="vscode" class="link">
-            <svg class="icon">
-              <use xlink:href="assets/icons.svg#vscode" />
-            </svg>
+  <nav class="side-bar scroll-hide">
+    <ul>
+      <li title="Home" class="">
+        <a routerLink="" class="logo">
+          <svg class="icon">
+            <use xlink:href="assets/icons.svg#quickeys" />
+          </svg>
+        </a>
+      </li>
+      <li title="Bash Commands" class="shortcut" [class.active-nav]="isRouteActive('/bash')">
+        <legend>1</legend>
+        <a routerLink="bash" class="link">
+          <svg class="icon">
+            <use xlink:href="assets/icons.svg#bash" />
+          </svg>
+          <span class="noselect">Bash</span>
+        </a>
+      </li>
+      <li title="Windows Commands" class="shortcut" [class.active-nav]="isRouteActive('/windows')">
+        <legend>2</legend>
+        <a routerLink="windows" class="link">
+          <svg class="icon">
+            <use xlink:href="assets/icons.svg#windows" />
+          </svg>
+          <span class="noselect">Windows</span>
+        </a>
+      </li>
+      <li title="Git Commands" class="shortcut" [class.active-nav]="isRouteActive('/git')">
+        <legend>3</legend>
+        <a routerLink="git" class="link">
+          <svg class="icon">
+            <use xlink:href="assets/icons.svg#git" />
+          </svg>
+          <span class="noselect">git</span>
+        </a>
+      </li>
+      <li title="Shortcuts for Visual Studio Code" class="shortcut" [class.active-nav]="isRouteActive('/vscode')">
+        <legend>4</legend>
+        <a routerLink="vscode" class="link">
+          <svg class="icon">
+            <use xlink:href="assets/icons.svg#vscode" />
+          </svg>
           <span class="noselect">VS Code</span>
         </a>
       </li>
-      </ul>
-    </nav>
-  </header>
+      <li title="Shortcuts for Google Chrome" class="shortcut" [class.active-nav]="isRouteActive('/chrome')">
+        <legend>5</legend>
+        <a routerLink="chrome" class="link">
+          <svg class="icon">
+            <use xlink:href="assets/icons.svg#chrome" />
+          </svg>
+          <span class="noselect">Chrome</span>
+        </a>
+      </li>
+      <li title="Shortcuts for Chrome Dev" class="shortcut" [class.active-nav]="isRouteActive('/chromedev')">
+        <legend>6</legend>
+        <a routerLink="chromedev" class="link">
+          <svg class="icon">
+            <use xlink:href="assets/icons.svg#chromedev" />
+          </svg>
+          <span class="noselect">Chrome</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
