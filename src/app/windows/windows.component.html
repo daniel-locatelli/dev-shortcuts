@@ -1,1 +1,56 @@
-<p>Windows in development!</p>
+<div class="table">
+    <h2>General</h2>
+    <div class="row" *ngFor="let item of general">
+      <span>{{ item.key }}</span>
+      <span>{{ item.command }}</span>
+    </div>
+  </div>
+  <div class="table">
+    <h2>Windows Logo</h2>
+    <div class="row" *ngFor="let item of windowsLogo">
+      <span>{{ item.key }}</span>
+      <span>{{ item.command }}</span>
+    </div>
+  </div>
+  <div class="table">
+    <h2>Command Prompt</h2>
+    <div class="row" *ngFor="let item of commandPrompt">
+      <span>{{ item.key }}</span>
+      <span>{{ item.command }}</span>
+    </div>
+  </div>
+  <div class="table">
+    <h2>Dialog Box</h2>
+    <div class="row" *ngFor="let item of dialogBox">
+      <span>{{ item.key }}</span>
+      <span>{{ item.command }}</span>
+    </div>
+  </div>
+  <div class="table">
+    <h2>File Explorer</h2>
+    <div class="row" *ngFor="let item of fileExplorer">
+      <span class="key">{{ item.key }} </span>
+      <span class="command">{{ item.command }}</span>
+    </div>
+  </div>
+  <div class="table">
+    <h2>Virtual Desktops</h2>
+    <div class="row" *ngFor="let item of virtualDesktops">
+      <span>{{ item.key }}</span>
+      <span>{{ item.command }}</span>
+    </div>
+  </div>
+  <div class="table">
+    <h2>Taskbar</h2>
+    <div class="row" *ngFor="let item of taskbar">
+      <span>{{ item.key }}</span>
+      <span>{{ item.command }}</span>
+    </div>
+  </div>
+  <div class="table">
+    <h2>Settings</h2>
+    <div class="row" *ngFor="let item of settings">
+      <span>{{ item.key }}</span>
+      <span>{{ item.command }}</span>
+    </div>
+  </div>
