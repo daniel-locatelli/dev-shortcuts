@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-chrome',
@@ -11,7 +11,18 @@ import { Component } from '@angular/core';
     class: 'container-shortcuts',
   },
 })
-export class ChromeComponent {
+export class ChromeComponent implements AfterViewInit {
+
+  @ViewChild('scroll') scrollElement: ElementRef | undefined;
+
+  ngAfterViewInit(): void {
+    console.log("Scroll height:");
+    if (this.scrollElement && this.scrollElement.nativeElement) {
+      console.log(this.scrollElement.nativeElement.scrollHeight);
+      this.scrollElement.nativeElement.scrollTop = this.scrollElement.nativeElement.scrollHeight;
+    }
+  }
+
   tabAndWindow: Shortcut[] = [
     { key: 'Ctrl + N', command: 'Open a new window' },
     { key: 'Ctrl + Shift + N', command: 'Open a new window in Incognito mode' },
@@ -56,20 +67,20 @@ export class ChromeComponent {
   ];
 
   addressBar: Shortcut[] = [
-    { key: 'Type a search term + Enter', command: 'Search with your default search engine' },
-    { key: 'Type a search engine name and press Tab', command: 'Search using a different search engine' },
+    { key: 'Search term + Enter', command: 'Search with your default search engine' },
+    { key: 'Search engine name and press Tab', command: 'Search using a different search engine' },
     {
-      key: 'Type a site name + Ctrl + Enter',
+      key: 'Site name + Ctrl + Enter',
       command: 'Add www. and .com to a site name, and open it in the current tab',
     },
     {
-      key: 'Type a site name + Ctrl + Shift + Enter',
+      key: 'Site name + Ctrl + Shift + Enter',
       command: 'Add www. and .com to a site name, and open it in a new window',
     },
-    { key: 'Type a search term + Alt + Enter', command: 'Open a new tab and perform a Google search' },
+    { key: 'Search term + Alt + Enter', command: 'Google search in new tab' },
     { key: 'Ctrl + L, Alt + D, F6', command: 'Jump to the address bar' },
     { key: 'Ctrl + K, Ctrl + E', command: 'Search from anywhere on the page' },
-    { key: 'Down arrow to highlight + Shift + Delete', command: 'Remove predictions from your address bar' },
+    { key: '↓ + Shift + Delete', command: 'Remove predictions from address bar' },
     { key: 'Ctrl + F5', command: 'Move cursor to the address bar' },
   ];
 
@@ -86,8 +97,8 @@ export class ChromeComponent {
     { key: 'Ctrl + D', command: 'Save your current webpage as a bookmark' },
     { key: 'Ctrl + Shift + D', command: 'Save all open tabs as bookmarks in a new folder' },
     { key: 'F11', command: 'Turn full-screen mode on or off' },
-    { key: 'Ctrl and +', command: 'Make everything on the page bigger' },
-    { key: 'Ctrl and -', command: 'Make everything on the page smaller' },
+    { key: 'Ctrl + +', command: 'Make everything on the page bigger' },
+    { key: 'Ctrl + -', command: 'Make everything on the page smaller' },
     { key: 'Ctrl + 0', command: 'Return everything on the page to default size' },
     { key: 'Space, PgDn', command: 'Scroll down a webpage, a screen at a time' },
     { key: 'Shift + Space, PgUp', command: 'Scroll up a webpage, a screen at a time' },
@@ -100,23 +111,22 @@ export class ChromeComponent {
     { key: 'Alt + Home', command: 'Open the Home page in the current tab' },
   ];
 
-mouse: Shortcut[] = [
-    { key: 'Open a link in a current tab (mouse only)', command: 'Drag a link to a tab' },
-    { key: 'Open a link in new background tab', command: 'Ctrl + Click a link' },
-    { key: 'Open a link, and jump to it', command: 'Ctrl + Shift + Click a link' },
-    { key: 'Open a link, and jump to it (mouse only)', command: 'Drag a link to a blank area of the tab strip' },
-    { key: 'Open a link in a new window', command: 'Shift + Click a link' },
-    { key: 'Open a tab in a new window (mouse only)', command: 'Drag the tab out of the tab strip' },
-    { key: 'Move a tab to a current window (mouse only)', command: 'Drag the tab into an existing window' },
-    { key: 'Return a tab to its original position', command: 'Press Esc while dragging' },
-    { key: 'Save the current webpage as a bookmark', command: 'Drag the web address to the Bookmarks Bar' },
-    { key: 'Scroll horizontally on the page', command: 'Shift + Scroll your mousewheel' },
-    { key: 'Download the target of a link', command: 'Alt + Click a link' },
-    { key: 'Display your browsing history', command: 'Right-click Back Back or click & hold Back Back' },
-    { key: 'Display your browsing history', command: 'Right-click Next Next or click & hold Next Next' },
-    { key: 'Switch between maximized and windowed modes', command: 'Double-click a blank area of the tab strip' },
-    { key: 'Make everything on the page bigger', command: 'Ctrl + Scroll your mousewheel up' },
-    { key: 'Make everything on the page smaller', command: 'Ctrl + Scroll your mousewheel down' },
+  mouse: Shortcut[] = [
+    { key: 'Drag a link to a tab', command: 'Open link in current tab (mouse only)' },
+    { key: 'Ctrl + Click a link', command: 'Open link in new background tab' },
+    { key: 'Ctrl + Shift + Click a link', command: 'Open link, and jump to it'},
+    { key: 'Drag a link to a blank area of the tab strip', command: 'Open link, and jump to it (mouse only)' },
+    { key: 'Shift + Click a link', command: 'Open link in a new window'},
+    { key: 'Drag the tab out of the tab strip', command: 'Open tab in a new window (mouse only)' },
+    { key: 'Drag the tab into an existing window', command: 'Move tab to a current window (mouse only)' },
+    { key: 'Press Esc while dragging', command: 'Return tab to original position' },
+    { key: 'Drag the web address to the Bookmarks Bar', command: 'Save current webpage as a bookmark'},
+    { key: 'Shift + Scroll your mousewheel', command: 'Scroll horizontally on the page' },
+    { key: 'Alt + Click a link', command: 'Download the target of a link' },
+    { key: 'Right-click ← / click & hold ←', command: 'Display your browsing history' },
+    { command: 'Display your browsing history', key: 'Right-click Next Next or click & hold Next Next' },
+    { command: 'Switch between maximized and windowed modes', key: 'Double-click a blank area of the tab strip' },
+    { command: 'Make everything on the page bigger', key: 'Ctrl + Scroll your mousewheel up' },
+    { command: 'Make everything on the page smaller', key: 'Ctrl + Scroll your mousewheel down' },
   ];
-  
 }

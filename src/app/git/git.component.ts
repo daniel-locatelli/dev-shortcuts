@@ -19,8 +19,8 @@ export class GitComponent {
   ];
 
   configuration: Shortcut[] = [
-    { key: 'git config --global user.name "Your Name"', command: 'Set user information' },
-    { key: 'git config --global user.email "your.email@example.com"', command: 'Set user email' },
+    { key: 'git config --global user.name "Name"', command: 'Set user information' },
+    { key: 'git config --global user.email "Email"', command: 'Set user email' },
     { key: 'git config --global core.editor <editor>', command: 'Set default text editor' },
   ];
 

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-chromedev',
@@ -11,7 +11,18 @@ import { Component } from '@angular/core';
     class: 'container-shortcuts',
   },
 })
-export class ChromedevComponent {
+export class ChromedevComponent implements AfterViewInit{
+
+  @ViewChild('scroll') scrollElement: ElementRef | undefined;
+
+  ngAfterViewInit(): void {
+    console.log("Scroll height");
+    if (this.scrollElement && this.scrollElement.nativeElement) {
+      console.log(this.scrollElement.nativeElement.scrollHeight);
+      this.scrollElement.nativeElement.scrollTop = this.scrollElement.nativeElement.scrollHeight;
+    }
+  }
+
   openDevTools: Shortcut[] = [
     { key: 'F12, Ctrl + Shift + I', command: 'Open whatever panel you used last' },
     { key: 'Ctrl + Shift + J', command: 'Open the Console panel' },
@@ -25,7 +36,7 @@ export class ChromedevComponent {
     {
       key: 'Ctrl + Shift + D',
       command:
-        'Switch back to whatever docking position you last used. If DevTools has been in its default position for the entire session, then this shortcut undocks DevTools into a separate window',
+        'Switch to last used docking position. If DevTools has been in its default position, then this undocks DevTools into a separate window',
     },
     { key: 'Ctrl + Shift + M', command: 'Toggle Device Mode' },
     { key: 'Ctrl + Shift + C', command: 'Toggle Inspect Element Mode' },
@@ -186,9 +197,9 @@ export class ChromedevComponent {
   memoryPanel: Shortcut[] = [{ key: 'Ctrl + E', command: 'Start / stop recording (Windows/Linux)' }];
 
   consolePanel: Shortcut[] = [
-    { key: '→ or Tab', command: 'Accept autocomplete suggestion' },
+    { key: '→, Tab', command: 'Accept autocomplete suggestion' },
     { key: 'Escape', command: 'Reject autocomplete suggestion' },
-    { key: 'Up / Down or Ctrl + P / N', command: 'Navigate the autocomplete list up or down' },
+    { key: '↑ / ↓, Ctrl + P / N', command: 'Navigate the autocomplete list up or down' },
     { key: '↑', command: 'Get previous statement' },
     { key: '↓', command: 'Get next statement' },
     { key: 'Ctrl + `', command: 'Focus the Console' },

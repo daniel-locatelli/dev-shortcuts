@@ -2,7 +2,7 @@
   <nav class="side-bar scroll-hide">
     <ul>
       <li title="Home" class="">
-        <a routerLink="">
+        <a routerLink="" tabIndex="-1">
           <svg class="logo">
             <use xlink:href="assets/icons.svg#quickeys" />
           </svg>
@@ -10,7 +10,7 @@
       </li>
       <li title="Bash Commands" class="shortcut" [class.active-nav]="isRouteActive('/bash')">
         <legend>1</legend>
-        <a routerLink="bash" class="link">
+        <a routerLink="bash" class="link" tabIndex="-1">
           <svg class="icon">
             <use xlink:href="assets/icons.svg#bash" />
           </svg>
@@ -19,7 +19,7 @@
       </li>
       <li title="Windows 11 Shortcuts" class="shortcut" [class.active-nav]="isRouteActive('/windows')">
         <legend>2</legend>
-        <a routerLink="windows" class="link">
+        <a routerLink="windows" class="link" tabIndex="-1">
           <svg class="icon">
             <use xlink:href="assets/icons.svg#windows" />
           </svg>
@@ -28,7 +28,7 @@
       </li>
       <li title="Git Commands" class="shortcut" [class.active-nav]="isRouteActive('/git')">
         <legend>3</legend>
-        <a routerLink="git" class="link">
+        <a routerLink="git" class="link" tabIndex="-1">
           <svg class="icon">
             <use xlink:href="assets/icons.svg#git" />
           </svg>
@@ -37,7 +37,7 @@
       </li>
       <li title="Shortcuts for Visual Studio Code" class="shortcut" [class.active-nav]="isRouteActive('/vscode')">
         <legend>4</legend>
-        <a routerLink="vscode" class="link">
+        <a routerLink="vscode" class="link" tabIndex="-1">
           <svg class="icon">
             <use xlink:href="assets/icons.svg#vscode" />
           </svg>
@@ -46,7 +46,7 @@
       </li>
       <li title="Shortcuts for Google Chrome" class="shortcut" [class.active-nav]="isRouteActive('/chrome')">
         <legend>5</legend>
-        <a routerLink="chrome" class="link">
+        <a routerLink="chrome" class="link" tabIndex="-1">
           <svg class="icon">
             <use xlink:href="assets/icons.svg#chrome" />
           </svg>
@@ -55,7 +55,7 @@
       </li>
       <li title="Shortcuts for Chrome Dev" class="shortcut" [class.active-nav]="isRouteActive('/chromedev')">
         <legend>6</legend>
-        <a routerLink="chromedev" class="link">
+        <a routerLink="chromedev" class="link" tabIndex="-1">
           <svg class="icon">
             <use xlink:href="assets/icons.svg#chromedev" />
           </svg>

@@ -110,6 +110,7 @@ li {
   -webkit-column-count: 3; /* Chrome, Safari, Opera */
   -moz-column-count: 3; /* Firefox */
   column-count: 3;
+  column-gap: var(--layout-padding);
   padding: var(--layout-padding);
   & h2 {
     border-bottom: 1px solid white;
@@ -117,10 +118,10 @@ li {
 }
 
 .container-shortcuts .row:nth-child(even) {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-tertiary);
 }
 .container-shortcuts .row:nth-child(odd) {
-  background-color: var(--bg-tertiary);
+  background-color: var(--bg-secondary);
 }
 
 .container-shortcuts::-webkit-scrollbar-track {
@@ -141,14 +142,13 @@ li {
 }
 
 .table + .table {
-  margin-top: 1rem;
+  margin-top: var(--layout-padding);
 }
 
 .row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  padding: 0.1rem;
-  padding-left: 0.2rem;
+  padding: 0.2rem;
+  padding-left: 0.3rem;
   font-size: 0.8rem;
   break-inside: avoid;
   & span {
@@ -252,6 +252,8 @@ input[type='button'] {
 
 @media screen and (max-width: 700px) {
   .container-shortcuts {
+    padding: 0;
+    padding-top: var(--layout-padding);
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
     column-count: 1;
@@ -259,6 +261,5 @@ input[type='button'] {
 
   .row {
     padding: 0.3rem;
-    font-size: 0.85rem;
   }
 }
