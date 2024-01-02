@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-bash',
@@ -11,7 +11,16 @@ import { Component } from '@angular/core';
     class: 'container-shortcuts',
   },
 })
-export class BashComponent {
+export class BashComponent implements AfterViewInit{
+
+  @ViewChild('scroll') scrollElement: ElementRef | undefined;
+
+  ngAfterViewInit(): void {
+    if (this.scrollElement && this.scrollElement.nativeElement) {
+      this.scrollElement.nativeElement.focus();    
+    }
+  }
+
   navigation = [
     { key: 'cd', command: 'Change directory' },
     { key: 'pwd', command: 'Print working directory' },

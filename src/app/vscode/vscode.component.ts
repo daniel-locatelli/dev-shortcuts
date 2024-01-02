@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-vscode',
@@ -11,7 +11,16 @@ import { Component } from '@angular/core';
     class: 'container-shortcuts'
   }
 })
-export class VscodeComponent {
+export class VscodeComponent implements AfterViewInit{
+
+  @ViewChild('scroll') scrollElement: ElementRef | undefined;
+
+  ngAfterViewInit(): void {
+    if (this.scrollElement && this.scrollElement.nativeElement) {
+      this.scrollElement.nativeElement.focus();    
+    }
+  }
+
   general: Shortcut[] = [
     { key: 'Ctrl + Shift + P, F1', command: 'Show Command Palette' },
     { key: 'Ctrl + P', command: 'Quick Open, Go to File…' },

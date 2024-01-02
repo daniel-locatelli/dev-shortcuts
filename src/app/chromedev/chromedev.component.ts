@@ -16,10 +16,8 @@ export class ChromedevComponent implements AfterViewInit{
   @ViewChild('scroll') scrollElement: ElementRef | undefined;
 
   ngAfterViewInit(): void {
-    console.log("Scroll height");
     if (this.scrollElement && this.scrollElement.nativeElement) {
-      console.log(this.scrollElement.nativeElement.scrollHeight);
-      this.scrollElement.nativeElement.scrollTop = this.scrollElement.nativeElement.scrollHeight;
+      this.scrollElement.nativeElement.focus();    
     }
   }
 

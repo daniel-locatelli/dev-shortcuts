@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { EventManager } from '@angular/platform-browser';
 
 @Component({
@@ -12,7 +12,16 @@ import { EventManager } from '@angular/platform-browser';
     class: 'container-shortcuts',
   },
 })
-export class GitComponent {
+export class GitComponent implements AfterViewInit{
+
+  @ViewChild('scroll') scrollElement: ElementRef | undefined;
+
+  ngAfterViewInit(): void {
+    if (this.scrollElement && this.scrollElement.nativeElement) {
+      this.scrollElement.nativeElement.focus();    
+    }
+  }
+  
   repositorySetup: Shortcut[] = [
     { key: 'git init', command: 'Initialize a new repository' },
     { key: 'git clone <repository-url>', command: 'Clone a repository' },
