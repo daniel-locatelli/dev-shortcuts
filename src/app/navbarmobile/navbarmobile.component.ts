@@ -17,6 +17,10 @@ export class NavbarmobileComponent {
     this.navbarVisible = !this.navbarVisible;
   }
 
+  public closeNavbar() {
+    this.navbarVisible = false;
+  }
+
 // This part down is to highlight the menu item
   currentRoute!: string;
   
