@@ -1,4 +1,9 @@
-<main calss="noselect">
-  <app-navbar></app-navbar>
+<main calss="noselect" [class.flexcolumn]="isMobile(screenWidth)">
+  @if (isMobile(screenWidth)) {
+    <app-navbarmobile></app-navbarmobile>
+    <!-- <app-navbar></app-navbar> -->
+  } @else {
+    <app-navbar></app-navbar>
+  }
   <router-outlet></router-outlet>
 </main>

@@ -1,1 +1,64 @@
-<p>navbarmobile works!</p>
+<header>
+  <a title="Home" routerLink="" class="homelink" tabIndex="-1">
+    <svg class="logomobile">
+      <use xlink:href="assets/icons.svg#quickeys" />
+    </svg>
+  </a>
+  <nav [class.nav-active]="navbarVisible">
+    <ul>
+      <li title="Bash Commands" class="shortcut" [class.active-nav]="isRouteActive('/bash')">
+        <a routerLink="bash" class="linkmobile" tabIndex="-1" (click)="onClick()">
+          <svg class="iconmobile">
+            <use xlink:href="assets/icons.svg#bash" />
+          </svg>
+          <span class="noselect">Bash</span>
+        </a>
+      </li>
+      <li title="Windows 11 Shortcuts" class="shortcut" [class.active-nav]="isRouteActive('/windows')">
+        <a routerLink="windows" class="linkmobile" tabIndex="-1" (click)="onClick()">
+          <svg class="iconmobile">
+            <use xlink:href="assets/icons.svg#windows" />
+          </svg>
+          <span class="noselect">Windows</span>
+        </a>
+      </li>
+      <li title="Git Commands" class="shortcut" [class.active-nav]="isRouteActive('/git')">
+        <a routerLink="git" class="linkmobile" tabIndex="-1" (click)="onClick()">
+          <svg class="iconmobile">
+            <use xlink:href="assets/icons.svg#git" />
+          </svg>
+          <span class="noselect">git</span>
+        </a>
+      </li>
+      <li title="Shortcuts for Visual Studio Code" class="shortcut" [class.active-nav]="isRouteActive('/vscode')">
+        <a routerLink="vscode" class="linkmobile" tabIndex="-1" (click)="onClick()">
+          <svg class="iconmobile">
+            <use xlink:href="assets/icons.svg#vscode" />
+          </svg>
+          <span class="noselect">VS Code</span>
+        </a>
+      </li>
+      <li title="Shortcuts for Google Chrome" class="shortcut" [class.active-nav]="isRouteActive('/chrome')">
+        <a routerLink="chrome" class="linkmobile" tabIndex="-1" (click)="onClick()">
+          <svg class="iconmobile">
+            <use xlink:href="assets/icons.svg#chrome" />
+          </svg>
+          <span class="noselect">Chrome</span>
+        </a>
+      </li>
+      <li title="Shortcuts for Chrome Dev" class="shortcut" [class.active-nav]="isRouteActive('/chromedev')">
+        <a routerLink="chromedev" class="linkmobile" tabIndex="-1" (click)="onClick()">
+          <svg class="iconmobile">
+            <use xlink:href="assets/icons.svg#chromedev" />
+          </svg>
+          <span class="noselect">Chrome Dev</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <a href="javascript:void(0);" class="hamburger" (click)="onClick()" [class.active-hamburger]="navbarVisible">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </a>
+</header>

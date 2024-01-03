@@ -13,6 +13,7 @@
   --bg-secondary: #222;
   --bg-tertiary: #333;
   --layout-padding: 2rem;
+  --mobile-padding: 1rem;
   --slider-handle-diameter: 1.6rem;
   --button-height: 2.6rem;
   --button-radius: 0.5rem;
@@ -253,13 +254,25 @@ input[type='button'] {
 @media screen and (max-width: 700px) {
   .container-shortcuts {
     padding: 0;
-    padding-top: var(--layout-padding);
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
     column-count: 1;
   }
 
+  .table {
+    margin-top: var(--mobile-padding);
+  }
+
+  .table:last-child {
+    margin-bottom: var(--layout-padding);
+  }
+
+  h2 {
+    padding-left: var(--mobile-padding);
+  }
+
   .row {
     padding: 0.3rem;
+    padding-left: calc(var(--mobile-padding) + 5px);
   }
 }

@@ -2,3 +2,7 @@ main {
     display: flex;
     height: 100dvh;
 }
+
+.flexcolumn {
+    flex-direction: column;
+}
