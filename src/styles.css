@@ -277,3 +277,14 @@ input[type='button'] {
     padding-left: calc(var(--mobile-padding) + 5px);
   }
 }
+
+.pageintro {
+ display: flex;
+  & h1 {
+    padding-left: var(--mobile-padding);
+  }
+  & svg {
+    margin-left: var(--mobile-padding);
+  }
+}
+
