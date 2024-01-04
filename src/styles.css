@@ -280,10 +280,15 @@ input[type='button'] {
 
 .pageintro {
   display: flex;
+  justify-content: center;
+  align-items: center;
   & h1 {
      padding-left: var(--mobile-padding);
   }
   & svg {
+     display: flex;
+     justify-content: center;
+     align-items: center;
      width: 50px;
      aspect-ratio: 1/1;
      margin-left: var(--mobile-padding);
