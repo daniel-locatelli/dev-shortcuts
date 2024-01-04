@@ -279,12 +279,14 @@ input[type='button'] {
 }
 
 .pageintro {
- display: flex;
+  display: flex;
   & h1 {
-    padding-left: var(--mobile-padding);
+     padding-left: var(--mobile-padding);
   }
   & svg {
-    margin-left: var(--mobile-padding);
+     width: 50px;
+     aspect-ratio: 1/1;
+     margin-left: var(--mobile-padding);
   }
 }
 
