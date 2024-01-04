@@ -12,20 +12,12 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
   },
 })
 export class PremiereproComponent implements AfterViewInit {
-  public screenWidth!: number;
 
-  ngOnInit() {
-    this.screenWidth = window.innerWidth;
-  }
-
-  onWindowResize() {
-    this.screenWidth = window.innerWidth;
-  }
 
   @ViewChild('scroll') scrollElement: ElementRef | undefined;
 
   ngAfterViewInit(): void {
-    if (this.scrollElement && this.scrollElement.nativeElement && this.screenWidth >= 700) {
+    if (this.scrollElement && this.scrollElement.nativeElement) {
       this.scrollElement.nativeElement.focus();
     }
   }
@@ -279,43 +271,27 @@ export class PremiereproComponent implements AfterViewInit {
 
   programMonitor: Shortcut[] = [
     { key: 'Ctrl + R', command: 'Show Rulers' },
-    { key: 'Cmd + R', command: 'Show Rulers' },
     { key: 'Ctrl + ;', command: 'Show Guides' },
-    { key: 'Cmd + ;', command: 'Show Guides' },
     { key: 'Ctrl + Shift + ;', command: 'Snap in Program Monitor' },
-    { key: 'Shift + Cmd + ;', command: 'Snap in Program Monitor' },
     { key: 'Ctrl + Alt + Shift + R', command: 'Lock Guides' },
-    { key: 'Opt + Shift + Cmd + R', command: 'Lock Guides' },
     { key: 'Shift + Ctrl + Up', command: 'Nudge Selected Object up by five frames' },
-    { key: 'Shift + Cmd + Up', command: 'Nudge Selected Object up by five frames' },
     { key: 'Shift + Ctrl + Right', command: 'Nudge Selected Object right by five frames' },
-    { key: 'Shift + Cmd + Right', command: 'Nudge Selected Object right by five frames' },
     { key: 'Shift + Ctrl + Left', command: 'Nudge Selected Object left by five frames' },
-    { key: 'Shift + Cmd + Left', command: 'Nudge Selected Object left by five frames' },
     { key: 'Shift + Ctrl + Down', command: 'Nudge Selected Object down by five frames' },
-    { key: 'Shift + Cmd + Down', command: 'Nudge Selected Object down by five frames' },
     { key: 'Ctrl + Up', command: 'Nudge Selected Object up by one frame' },
-    { key: 'Cmd + Up', command: 'Nudge Selected Object up by one frame' },
     { key: 'Ctrl + Right', command: 'Nudge Selected Object right by one frame' },
-    { key: 'Cmd + Right', command: 'Nudge Selected Object right by one frame' },
     { key: 'Ctrl + Left', command: 'Nudge Selected Object left by one frame' },
-    { key: 'Cmd + Left', command: 'Nudge Selected Object left by one frame' },
     { key: 'Ctrl + Down', command: 'Nudge Selected Object down by one frame' },
-    { key: 'Cmd + Down', command: 'Nudge Selected Object down by one frame' },
   ];
 
   projectPanel: Shortcut[] = [
     { key: 'Ctrl + B', command: 'New Bin' },
-    { key: 'Cmd + B', command: 'New Bin' },
     { key: 'Backspace', command: 'Delete' },
     { key: 'Delete', command: 'Delete' },
     { key: 'Ctrl + Page Up', command: 'List' },
-    { key: 'Cmd + Page Up', command: 'List' },
     { key: 'Ctrl + Page Down', command: 'Icon' },
-    { key: 'Cmd + Page Down', command: 'Icon' },
     { key: 'Shift + H', command: 'Hover Scrub' },
     { key: 'Ctrl + Delete', command: 'Delete Selection with Options' },
-    { key: 'Cmd + Forward Delete', command: 'Delete Selection with Options' },
     { key: 'Shift + Down', command: 'Extend Selection Down' },
     { key: 'Shift + Left', command: 'Extend Selection Left' },
     { key: 'Shift + Right', command: 'Extend Selection Right' },

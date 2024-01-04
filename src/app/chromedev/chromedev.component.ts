@@ -12,20 +12,11 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
   },
 })
 export class ChromedevComponent implements AfterViewInit{
-  public screenWidth!: number;
-
-  ngOnInit() {
-    this.screenWidth = window.innerWidth;
-  }
-  
-  onWindowResize() {
-    this.screenWidth = window.innerWidth;
-  }
 
   @ViewChild('scroll') scrollElement: ElementRef | undefined;
 
   ngAfterViewInit(): void {
-    if (this.scrollElement && this.scrollElement.nativeElement && this.screenWidth >= 700) {
+    if (this.scrollElement && this.scrollElement.nativeElement) {
       this.scrollElement.nativeElement.focus();    
     }
   }

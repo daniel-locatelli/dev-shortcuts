@@ -1,11 +1,11 @@
-<div class="pageintro">
+<div class="pageintro" tabIndex="0" #scroll>
   <h1>Shortcuts for</h1>
   <svg class="logo">
     <use xlink:href="assets/icons.svg#premierepro" />
   </svg>
 </div>
 <div class="table">
-  <h2 tabIndex="0" #scroll>File</h2>
+  <h2 tabIndex="0">File</h2>
   <div class="row" *ngFor="let item of file">
     <span>{{ item.key }}</span>
     <span>{{ item.command }}</span>

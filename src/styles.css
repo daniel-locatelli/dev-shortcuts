@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
 
 :root {
   --primary: white;
@@ -73,6 +72,7 @@ h2 {
   -webkit-break-after: avoid;
   break-after: avoid;
   break-inside: avoid;
+  
 }
 
 h3 {
@@ -144,6 +144,10 @@ li {
 
 .table + .table {
   margin-top: var(--layout-padding);
+}
+
+.pageintro:focus {
+  outline: none;
 }
 
 .row {
@@ -244,18 +248,15 @@ input[type='button'] {
   justify-content: center;
   align-items: center;
   height: fit-content;
-  padding-top: var(--mobile-padding);
   padding-bottom: var(--mobile-padding);
   & h1 {
-    /* flex: 0 1; */
     text-align: end;
-    /* padding-left: var(--mobile-padding); */
   }
   & svg {
      display: flex;
      justify-content: center;
      align-items: center;
-     width: 50px;
+     width: 40px;
      aspect-ratio: 1/1;
      margin-left: var(--mobile-padding);
      margin-right: var(--mobile-padding);
@@ -291,7 +292,7 @@ input[type='button'] {
     margin-bottom: var(--layout-padding);
   }
 
-  h2 {
+  .table h2 {
     padding-left: var(--mobile-padding);
   }
 
@@ -299,10 +300,4 @@ input[type='button'] {
     padding: 0.3rem;
     padding-left: calc(var(--mobile-padding) + 5px);
   }
-  
-  .pageintro {
-    padding-bottom: 0;
-  }
 }
-
-
