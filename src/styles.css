@@ -283,6 +283,7 @@ input[type='button'] {
   justify-content: center;
   align-items: center;
   height: fit-content;
+  padding-top: var(--mobile-padding);
   & h1 {
     text-align: end;
     padding-left: var(--mobile-padding);
