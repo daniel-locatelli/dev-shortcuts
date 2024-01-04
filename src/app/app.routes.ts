@@ -7,6 +7,7 @@ import { BashComponent } from './bash/bash.component';
 import { WindowsComponent } from './windows/windows.component';
 import { ChromeComponent } from './chrome/chrome.component';
 import { ChromedevComponent } from './chromedev/chromedev.component';
+import { PremiereproComponent } from './premierepro/premierepro.component';
 
 export const routes: Routes = [
     {
@@ -43,5 +44,10 @@ export const routes: Routes = [
         path: 'chromedev',
         component: ChromedevComponent,
         title: 'Quickeys | Chrome Dev'
+    },
+    {
+        path: 'premierepro',
+        component: PremiereproComponent,
+        title: 'Quickeys | Premiere Pro'
     }
 ];

@@ -68,6 +68,10 @@ export class AppComponent {
         this.router.navigate(['/chromedev']);
         event.preventDefault();
         break;
+      case '7':
+        this.router.navigate(['/premierepro']);
+        event.preventDefault();
+        break;
     }
   }
 }
