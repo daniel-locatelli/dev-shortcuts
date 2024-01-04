@@ -283,7 +283,8 @@ input[type='button'] {
   justify-content: center;
   align-items: center;
   & h1 {
-     padding-left: var(--mobile-padding);
+    text-align: end;
+    padding-left: var(--mobile-padding);
   }
   & svg {
      display: flex;
