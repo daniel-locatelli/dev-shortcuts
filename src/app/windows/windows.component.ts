@@ -12,14 +12,24 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
   },
 })
 export class WindowsComponent implements AfterViewInit{
+  public screenWidth!: number;
+
+  ngOnInit() {
+    this.screenWidth = window.innerWidth;
+  }
+  
+  onWindowResize() {
+    this.screenWidth = window.innerWidth;
+  }
 
   @ViewChild('scroll') scrollElement: ElementRef | undefined;
 
   ngAfterViewInit(): void {
-    if (this.scrollElement && this.scrollElement.nativeElement) {
+    if (this.scrollElement && this.scrollElement.nativeElement && this.screenWidth >= 700) {
       this.scrollElement.nativeElement.focus();    
     }
   }
+
 
   general: Shortcut[] = [
     { key: 'Ctrl + X', command: 'Cut the selected item' },
