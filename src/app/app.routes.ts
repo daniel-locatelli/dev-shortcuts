@@ -8,6 +8,7 @@ import { WindowsComponent } from './windows/windows.component';
 import { ChromeComponent } from './chrome/chrome.component';
 import { ChromedevComponent } from './chromedev/chromedev.component';
 import { PremiereproComponent } from './premierepro/premierepro.component';
+import { AftereffectsComponent } from './aftereffects/aftereffects.component';
 
 export const routes: Routes = [
     {
@@ -49,5 +50,11 @@ export const routes: Routes = [
         path: 'premierepro',
         component: PremiereproComponent,
         title: 'Quickeys | Premiere Pro'
+    }
+    ,
+    {
+        path: 'aftereffects',
+        component: AftereffectsComponent,
+        title: 'Quickeys | Affter Effects'
     }
 ];

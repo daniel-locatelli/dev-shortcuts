@@ -72,6 +72,10 @@ export class AppComponent {
         this.router.navigate(['/premierepro']);
         event.preventDefault();
         break;
+      case '8':
+        this.router.navigate(['/aftereffects']);
+        event.preventDefault();
+        break;
     }
   }
 }

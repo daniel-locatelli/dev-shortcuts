@@ -43,7 +43,7 @@
           <svg class="iconmobile">
             <use xlink:href="assets/icons.svg#chrome" />
           </svg>
-          <span class="noselect">Chrome</span>
+          <span class="noselect">Google Chrome</span>
         </a>
       </li>
       <li title="Shortcuts for Chrome Dev" class="shortcut" [class.active-nav]="isRouteActive('/chromedev')">
@@ -51,7 +51,7 @@
           <svg class="iconmobile">
             <use xlink:href="assets/icons.svg#chromedev" />
           </svg>
-          <span class="noselect">Chrome Dev</span>
+          <span class="noselect">Google Chrome Dev</span>
         </a>
       </li>
       <li title="Shortcuts for Adobe Premiere Pro" class="shortcut" [class.active-nav]="isRouteActive('/premierepro')">
@@ -59,7 +59,15 @@
           <svg class="iconmobile">
             <use xlink:href="assets/icons.svg#premierepro" />
           </svg>
-          <span class="noselect">Premiere Pro</span>
+          <span class="noselect">Adobe Premiere Pro</span>
+        </a>
+      </li>
+      <li title="Shortcuts for After Effects" class="shortcut" [class.active-nav]="isRouteActive('/aftereffects')">
+        <a routerLink="aftereffects" class="linkmobile" tabIndex="-1" (click)="onClick()">
+          <svg class="iconmobile">
+            <use xlink:href="assets/icons.svg#aftereffects" />
+          </svg>
+          <span class="noselect">Adobe After Effects</span>
         </a>
       </li>
     </ul>
