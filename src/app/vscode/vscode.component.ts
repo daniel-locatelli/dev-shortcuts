@@ -8,25 +8,15 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
   templateUrl: './vscode.component.html',
   styleUrl: './vscode.component.css',
   host: {
-    class: 'container-shortcuts'
-  }
+    class: 'container-shortcuts',
+  },
 })
-export class VscodeComponent implements AfterViewInit{
-  public screenWidth!: number;
-
-  ngOnInit() {
-    this.screenWidth = window.innerWidth;
-  }
-  
-  onWindowResize() {
-    this.screenWidth = window.innerWidth;
-  }
-
+export class VscodeComponent implements AfterViewInit {
   @ViewChild('scroll') scrollElement: ElementRef | undefined;
 
   ngAfterViewInit(): void {
-    if (this.scrollElement && this.scrollElement.nativeElement && this.screenWidth >= 700) {
-      this.scrollElement.nativeElement.focus();    
+    if (this.scrollElement && this.scrollElement.nativeElement) {
+      this.scrollElement.nativeElement.focus();
     }
   }
 
@@ -66,7 +56,7 @@ export class VscodeComponent implements AfterViewInit{
     { key: 'Shift + Alt + A', command: 'Toggle block comment' },
     { key: 'Alt + Z', command: 'Toggle word wrap' },
   ];
-  
+
   navigation: Shortcut[] = [
     { key: 'Ctrl + T', command: 'Show all Symbols' },
     { key: 'Ctrl + G', command: 'Go to Line...' },
@@ -79,7 +69,7 @@ export class VscodeComponent implements AfterViewInit{
     { key: 'Alt + ← / →', command: 'Go back / forward' },
     { key: 'Ctrl + M', command: 'Toggle Tab moves focus' },
   ];
-  
+
   searchAndReplace: Shortcut[] = [
     { key: 'Ctrl + F', command: 'Find' },
     { key: 'Ctrl + H', command: 'Replace' },
@@ -89,7 +79,7 @@ export class VscodeComponent implements AfterViewInit{
     { key: 'Ctrl + K Ctrl + D', command: 'Move last selection to next Find match' },
     { key: 'Alt + C / R / W', command: 'Toggle case-sensitive / regex / whole word' },
   ];
-  
+
   //Mouse actions are still hard-coded
   multiCursorAndSelection: Shortcut[] = [
     { key: 'Alt + Click', command: 'Insert cursor' },
@@ -105,7 +95,7 @@ export class VscodeComponent implements AfterViewInit{
     { key: 'Ctrl + Shift + Alt + (arrow key)', command: 'Column (box) selection' },
     { key: 'Ctrl + Shift + Alt + PgUp/PgDn', command: 'Column (box) selection page up/down' },
   ];
-  
+
   richLanguagesEditing: Shortcut[] = [
     { key: 'Ctrl + Space, Ctrl + I', command: 'Trigger suggestion' },
     { key: 'Ctrl + Shift + Space', command: 'Trigger parameter hints' },
@@ -120,7 +110,7 @@ export class VscodeComponent implements AfterViewInit{
     { key: 'Ctrl + K  Ctrl + X', command: 'Trim trailing whitespace' },
     { key: 'Ctrl + K  M', command: 'Change file language' },
   ];
-  
+
   editorManagement: Shortcut[] = [
     { key: 'Ctrl + F4, Ctrl + W', command: 'Close editor' },
     { key: 'Ctrl + K  F', command: 'Close folder' },
@@ -130,7 +120,7 @@ export class VscodeComponent implements AfterViewInit{
     { key: 'Ctrl + Shift + PgUp / PgDn', command: 'Move editor left/right' },
     { key: 'Ctrl + K ← / →', command: 'Move active editor group' },
   ];
-  
+
   fileManagement: Shortcut[] = [
     { key: 'Ctrl + N', command: 'New File' },
     { key: 'Ctrl + O', command: 'Open File...' },
@@ -147,7 +137,7 @@ export class VscodeComponent implements AfterViewInit{
     { key: 'Ctrl + K  R', command: 'Reveal active file in Explorer' },
     { key: 'Ctrl + K  O', command: 'Show active file in new window/instance' },
   ];
-  
+
   display: Shortcut[] = [
     { key: 'F11', command: 'Toggle full screen' },
     { key: 'Shift + Alt + 0', command: 'Toggle editor layout (horizontal/vertical)' },
@@ -165,7 +155,7 @@ export class VscodeComponent implements AfterViewInit{
     { key: 'Ctrl + K  V', command: 'Open Markdown preview to the side' },
     { key: 'Ctrl + K  Z', command: 'Zen Mode (Esc Esc to exit)' },
   ];
-  
+
   debug: Shortcut[] = [
     { key: 'F9', command: 'Toggle breakpoint' },
     { key: 'F5', command: 'Start/Continue' },
@@ -174,7 +164,7 @@ export class VscodeComponent implements AfterViewInit{
     { key: 'F10', command: 'Step over' },
     { key: 'Ctrl + K  Ctrl + I', command: 'Show hover' },
   ];
-  
+
   integratedTerminal: Shortcut[] = [
     { key: 'Ctrl + `', command: 'Show integrated terminal' },
     { key: 'Ctrl + Shift + `', command: 'Create new terminal' },

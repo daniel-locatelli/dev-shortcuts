@@ -11,23 +11,16 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
     class: 'container-shortcuts',
   },
 })
-export class BashComponent implements AfterViewInit{
+export class BashComponent implements AfterViewInit {
 
-  public screenWidth!: number;
+  // Check chatGPT for a reusable table component.
 
-  ngOnInit() {
-    this.screenWidth = window.innerWidth;
-  }
-  
-  onWindowResize() {
-    this.screenWidth = window.innerWidth;
-  }
-
+  // Automatic focus after view init (to allow to navigate with arrows up and down)
   @ViewChild('scroll') scrollElement: ElementRef | undefined;
 
   ngAfterViewInit(): void {
-    if (this.scrollElement && this.scrollElement.nativeElement && this.screenWidth >= 700) {
-      this.scrollElement.nativeElement.focus();    
+    if (this.scrollElement && this.scrollElement.nativeElement) {
+      this.scrollElement.nativeElement.focus();
     }
   }
 

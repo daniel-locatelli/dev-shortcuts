@@ -2,9 +2,7 @@ nav {
     display: flex;
     flex-direction: column;
     width: 100px;
-    max-height: 100vh;
     height: 100dvh;
-    overflow: auto;
     justify-content: space-between;
     border-inline-end: 1px solid var(--bg-tertiary);
     padding-block-start: var(--layout-padding);

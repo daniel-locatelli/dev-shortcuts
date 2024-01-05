@@ -11,25 +11,14 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
     class: 'container-shortcuts',
   },
 })
-export class WindowsComponent implements AfterViewInit{
-  public screenWidth!: number;
-
-  ngOnInit() {
-    this.screenWidth = window.innerWidth;
-  }
-  
-  onWindowResize() {
-    this.screenWidth = window.innerWidth;
-  }
-
+export class WindowsComponent implements AfterViewInit {
   @ViewChild('scroll') scrollElement: ElementRef | undefined;
 
   ngAfterViewInit(): void {
-    if (this.scrollElement && this.scrollElement.nativeElement && this.screenWidth >= 700) {
-      this.scrollElement.nativeElement.focus();    
+    if (this.scrollElement && this.scrollElement.nativeElement) {
+      this.scrollElement.nativeElement.focus();
     }
   }
-
 
   general: Shortcut[] = [
     { key: 'Ctrl + X', command: 'Cut the selected item' },
@@ -231,8 +220,6 @@ export class WindowsComponent implements AfterViewInit{
     },
     { key: 'Win + Alt + Enter', command: 'Open taskbar settings (on taskbar item focus)' },
   ];
-
-
 
   commandPrompt: Shortcut[] = [
     { key: 'Ctrl + C, Ctrl + Insert', command: 'Copy the selected text' },

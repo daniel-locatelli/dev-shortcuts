@@ -12,22 +12,12 @@ import { EventManager } from '@angular/platform-browser';
     class: 'container-shortcuts',
   },
 })
-export class GitComponent implements AfterViewInit{
-  public screenWidth!: number;
-
-  ngOnInit() {
-    this.screenWidth = window.innerWidth;
-  }
-  
-  onWindowResize() {
-    this.screenWidth = window.innerWidth;
-  }
-
+export class GitComponent implements AfterViewInit {
   @ViewChild('scroll') scrollElement: ElementRef | undefined;
 
   ngAfterViewInit(): void {
-    if (this.scrollElement && this.scrollElement.nativeElement && this.screenWidth >= 700) {
-      this.scrollElement.nativeElement.focus();    
+    if (this.scrollElement && this.scrollElement.nativeElement) {
+      this.scrollElement.nativeElement.focus();
     }
   }
 
@@ -60,10 +50,11 @@ export class GitComponent implements AfterViewInit{
   remoteRepositories: Shortcut[] = [
     // Remote Repositories
     { key: 'git remote add <remote-name> <repository-url>', command: 'Add a remote repository' },
+    { key: 'git remote set-url origin <new-repository-url>', command: 'Change remote repository' },
     { key: 'git fetch <remote-name>', command: 'Fetch changes from a remote repository' },
     { key: 'git pull <remote-name> <branch-name>', command: 'Pull changes from a remote repository' },
     { key: 'git push <remote-name> <branch-name>', command: 'Push changes to a remote repository' },
-    {key: 'git remote -v', command: 'Show URL of remote branches'}
+    { key: 'git remote -v', command: 'Show URL of remote branches' },
   ];
 
   inspectingChanges: Shortcut[] = [

@@ -12,11 +12,12 @@
   --bg-secondary: #222;
   --bg-tertiary: #333;
   --layout-padding: 2rem;
-  --mobile-padding: 1rem;
   --slider-handle-diameter: 1.6rem;
   --button-height: 2.6rem;
   --button-radius: 0.5rem;
   --nav-sel-thickness: 2px;
+  --mobile-padding: 1rem;
+  --mobile-header: calc(40px + (2 * var(--mobile-padding)))
 }
 
 * {
@@ -33,18 +34,6 @@ html {
   font-weight: 200;
   scroll-behavior: smooth;
   background-color: var(--bg-primary);
-}
-
-body::-webkit-scrollbar {
-  width: 0.1rem;
-}
-
-body::-webkit-scrollbar-track {
-  background: var(--bg-tertiary);
-}
-
-body::-webkit-scrollbar-thumb {
-  background: var(--primary);
 }
 
 .noselect {
@@ -67,8 +56,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1rem;
-  font-weight: 400;
+  font-weight: 200;
   -webkit-break-after: avoid;
   break-after: avoid;
   break-inside: avoid;
@@ -88,25 +76,63 @@ li {
   list-style: none;
 }
 
-.home {
-  padding: var(--layout-padding);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+footer {
+  background: var(--bg-secondary);
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0 50px;
+  flex-direction: column;
+  & div {
+    width: clamp(300px, 33svw, 45svw);
+    & h2 {
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+    & p {
+      padding-bottom: 1rem;
+    }
+  }
+  & a {
+    color: var(--secondary);
+  }
+}
+
+.home {
+  overflow-y: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+.home::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+.home::-webkit-scrollbar-thumb {
+  background: var(--secondary);
 }
 
 .container-home {
+  min-height: 100svh;
   width: clamp(300px, 33svw, 45svw);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   gap: 5svh;
+  text-align: center;
+  outline: none;
 }
 
 .container-shortcuts {
-  overflow-x: hidden;
+  overflow-y: auto;
   width: 100svw;
   -webkit-column-count: 3; /* Chrome, Safari, Opera */
   -moz-column-count: 3; /* Firefox */
@@ -114,6 +140,8 @@ li {
   column-gap: var(--layout-padding);
   padding: var(--layout-padding);
   & h2 {
+    font-size: 1rem;
+    font-weight: 400;
     border-bottom: 1px solid white;
   }
 }
@@ -162,72 +190,12 @@ li {
   }
 }
 
+.rowclicked {
+  background-color: rgba(127, 255, 212, 0.2);
+}
+
 span + span {
   padding-left: 0.5rem;
-}
-
-input {
-  background-color: var(--bg-secondary);
-  font-family: 'Inconsolata', sans-serif;
-  font-size: 1rem;
-}
-
-.container-button {
-  width: 49%;
-  & input {
-    color: var(--bg-primary);
-    border: 1px solid var(--primary);
-    height: var(--button-height);
-    width: 100%;
-    padding-left: var(--layout-padding);
-    padding-right: var(--layout-padding);
-    border-radius: var(--button-radius);
-    background-color: var(--primary90);
-  }
-}
-
-input[type='button']:hover {
-  font-weight: 300;
-  color: (var(--primary));
-  border: 1px solid var(--secondary);
-  background-color: var(--bg-secondary);
-}
-
-input[type='button']:active {
-  background-color: var(--bg-tertiary);
-  color: var(--primary);
-}
-
-input[type='button'] {
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 100%;
-  flex-grow: 1;
-  text-align: center;
-  padding: calc(var(--layout-padding) / 4);
-  border-radius: var(--button-radius);
-  background-color: var(--bg-secondary);
-  & h3 {
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-  & div {
-    font-size: 1.2rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
 }
 
 .development {
@@ -277,11 +245,25 @@ input[type='button'] {
 }
 
 @media screen and (max-width: 700px) {
+  .container-home {
+    min-height: calc(100svh - var(--mobile-header));
+    & h1 {
+      font-size: 1.6rem;
+    }
+    & h2 {
+      font-size: 1rem;
+    }
+  }
+  
   .container-shortcuts {
     padding: 0;
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
     column-count: 1;
+  }
+
+  .pageintro {
+    margin-top: var(--mobile-padding);
   }
 
   .table {

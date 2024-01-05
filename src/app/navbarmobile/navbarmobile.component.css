@@ -23,7 +23,7 @@ ul {
 li {
   display: flex;
   align-items: center;
-  height: calc(40px + (2 * var(--mobile-padding)));
+  height: var(--mobile-header);
   & a {
     display: flex;
     width: 100%;
@@ -60,7 +60,7 @@ li a:hover {
   right: 0;
   justify-content: center;
   align-items: center;
-  height: calc(40px + (2 * var(--mobile-padding)));
+  height: var(--mobile-header);
   aspect-ratio: 1/1;
 }
 

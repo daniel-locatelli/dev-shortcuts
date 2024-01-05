@@ -11,22 +11,12 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
     class: 'container-shortcuts',
   },
 })
-export class ChromeComponent implements AfterViewInit{
-  public screenWidth!: number;
-
-  ngOnInit() {
-    this.screenWidth = window.innerWidth;
-  }
-  
-  onWindowResize() {
-    this.screenWidth = window.innerWidth;
-  }
-
+export class ChromeComponent implements AfterViewInit {
   @ViewChild('scroll') scrollElement: ElementRef | undefined;
 
   ngAfterViewInit(): void {
-    if (this.scrollElement && this.scrollElement.nativeElement && this.screenWidth >= 700) {
-      this.scrollElement.nativeElement.focus();    
+    if (this.scrollElement && this.scrollElement.nativeElement) {
+      this.scrollElement.nativeElement.focus();
     }
   }
 
@@ -121,13 +111,13 @@ export class ChromeComponent implements AfterViewInit{
   mouse: Shortcut[] = [
     { key: 'Drag a link to a tab', command: 'Open link in current tab (mouse only)' },
     { key: 'Ctrl + Click a link', command: 'Open link in new background tab' },
-    { key: 'Ctrl + Shift + Click a link', command: 'Open link, and jump to it'},
+    { key: 'Ctrl + Shift + Click a link', command: 'Open link, and jump to it' },
     { key: 'Drag a link to a blank area of the tab strip', command: 'Open link, and jump to it (mouse only)' },
-    { key: 'Shift + Click a link', command: 'Open link in a new window'},
+    { key: 'Shift + Click a link', command: 'Open link in a new window' },
     { key: 'Drag the tab out of the tab strip', command: 'Open tab in a new window (mouse only)' },
     { key: 'Drag the tab into an existing window', command: 'Move tab to a current window (mouse only)' },
     { key: 'Press Esc while dragging', command: 'Return tab to original position' },
-    { key: 'Drag the web address to the Bookmarks Bar', command: 'Save current webpage as a bookmark'},
+    { key: 'Drag the web address to the Bookmarks Bar', command: 'Save current webpage as a bookmark' },
     { key: 'Shift + Scroll your mousewheel', command: 'Scroll horizontally on the page' },
     { key: 'Alt + Click a link', command: 'Download the target of a link' },
     { key: 'Right-click ← / click & hold ←', command: 'Display your browsing history' },

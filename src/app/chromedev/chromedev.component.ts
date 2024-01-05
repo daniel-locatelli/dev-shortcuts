@@ -11,13 +11,12 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
     class: 'container-shortcuts',
   },
 })
-export class ChromedevComponent implements AfterViewInit{
-
+export class ChromedevComponent implements AfterViewInit {
   @ViewChild('scroll') scrollElement: ElementRef | undefined;
 
   ngAfterViewInit(): void {
     if (this.scrollElement && this.scrollElement.nativeElement) {
-      this.scrollElement.nativeElement.focus();    
+      this.scrollElement.nativeElement.focus();
     }
   }
 

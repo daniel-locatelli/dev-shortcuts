@@ -54,6 +54,14 @@
           <span class="noselect">Chrome Dev</span>
         </a>
       </li>
+      <li title="Shortcuts for Adobe Premiere Pro" class="shortcut" [class.active-nav]="isRouteActive('/premierepro')">
+        <a routerLink="premierepro" class="linkmobile" tabIndex="-1" (click)="onClick()">
+          <svg class="iconmobile">
+            <use xlink:href="assets/icons.svg#premierepro" />
+          </svg>
+          <span class="noselect">Premiere Pro</span>
+        </a>
+      </li>
     </ul>
   </nav>
   <a href="javascript:void(0);" class="hamburger" (click)="onClick()" [class.active-hamburger]="navbarVisible">
