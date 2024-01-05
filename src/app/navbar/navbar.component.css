@@ -13,7 +13,7 @@ nav {
   ul {
     display: flex;
     flex-direction: column;
-    gap: clamp(10px, 1.8rem, var(--layout-padding));
+    gap: clamp(10px, 1.5rem, var(--layout-padding));
   }
 
   .shortcut {
