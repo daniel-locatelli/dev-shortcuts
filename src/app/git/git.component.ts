@@ -66,6 +66,7 @@ export class GitComponent implements AfterViewInit {
 
   undoingChanges: Shortcut[] = [
     // Undoing Changes
+    { key: 'git commit --amend', command: 'Change the most recent commit message. To save changes in the vi editor type :wq Enter' },
     { key: 'git checkout -- <file(s)>', command: 'Discard changes in the working directory' },
     { key: 'git reset --soft HEAD^', command: 'Undo the last commit (local only)' },
     { key: 'git reset HEAD^', command: 'Undo the last commit and unstage changes' },
