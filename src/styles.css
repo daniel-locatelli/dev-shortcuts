@@ -8,13 +8,13 @@
   --primary70: rgba(255, 255, 255, 0.7);
   --primary30: rgba(255, 255, 255, 0.3);
   --secondary: aquamarine;
+  --secondary70: rgba(128, 255, 212, 0.7);
+  --secondary50: rgba(128, 255, 212, 0.5);
+  --secondary30: rgba(128, 255, 212, 0.3);
   --bg-primary: #1a1a1a;
   --bg-secondary: #222;
   --bg-tertiary: #333;
   --layout-padding: 2rem;
-  --slider-handle-diameter: 1.6rem;
-  --button-height: 2.6rem;
-  --button-radius: 0.5rem;
   --nav-sel-thickness: 2px;
   --mobile-padding: 1rem;
   --mobile-header: calc(40px + (2 * var(--mobile-padding)))
@@ -34,6 +34,16 @@ html {
   font-weight: 200;
   scroll-behavior: smooth;
   background-color: var(--bg-primary);
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: var(--secondary50);
+}
+
+::selection {
+  color: black;
+  background: var(--secondary50);
 }
 
 .noselect {
@@ -231,16 +241,20 @@ span + span {
   }
 }
 
+.row {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  & :first-child {
+    font-weight: 600; 
+  }
+  padding:0.4rem 0.2rem 0.4rem 0.4rem;
+}
+
 @media screen and (max-width: 950px) {
   .container-shortcuts {
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
-  }
-
-  .row {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    padding: 0.2rem;
   }
 }
 
