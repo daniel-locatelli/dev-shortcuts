@@ -22,6 +22,7 @@ export class AftereffectsComponent {
   }
 
   general: Shortcut[] = [
+    { key: "Ctrl + Alt + '", command: 'Open keyboard shortcuts' },
     { key: 'Ctrl + A', command: 'Select all' },
     { key: 'F2 or Ctrl + Shift + A', command: 'Deselect all' },
     {
@@ -406,7 +407,6 @@ export class AftereffectsComponent {
       key: 'Shift + - (hyphen) or Shift + = (equal sign) on the main keyboard',
       command: 'Cycle forward or backward through blending modes for selected layers',
     },
-    { key: 'Ctrl + F', command: 'Find in Timeline panel' },
   ];
 
   timelinePanel: Shortcut[] = [
