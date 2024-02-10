@@ -49,9 +49,9 @@ export class BashComponent implements AfterViewInit {
   textManipulation = [
     { key: 'cat', command: 'Concatenate and display the content of files' },
     { key: 'grep', command: 'Search for a patterns in files' },
-    { key: 'grep lookupword filename', command: 'Search for a pattern in a file' },
-    { key: 'grep lookupword .', command: 'Search for a pattern in all files of current directory' },
-    { key: 'grep -r lookupword .', command: 'Search for a pattern in all files of current directory and subdirectories (recursively)' },
+    { key: 'grep "text" filename', command: 'Search for text in a file' },
+    { key: 'grep "text" .', command: 'Search for text in all files of current directory' },
+    { key: 'grep -r "text" .', command: 'Search for text in all files of current directory and subdirectories (recursively)' },
     { key: 'sed', command: 'Stream editor for filtering and transforming text' },
     { key: 'awk', command: 'Pattern scanning and processing language' },
     { key: 'sort', command: 'Sort lines of text files' },
