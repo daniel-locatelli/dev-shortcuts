@@ -141,9 +141,10 @@ footer {
   outline: none;
 }
 
-.container-shortcuts {
+.container-router {
   display: flex;
   overflow-y: auto;
+  width: 100%;
 }
 
 .shortcuts {
@@ -167,16 +168,16 @@ footer {
   background-color: var(--bg-secondary);
 }
 
-.container-shortcuts::-webkit-scrollbar-track {
+.container-router::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 0.2rem rgba(0, 0, 0, 0.3);
   background-color: var(--bg-tertiary);
 }
 
-.container-shortcuts::-webkit-scrollbar {
+.container-router::-webkit-scrollbar {
   width: 0.2rem;
 }
 
-.container-shortcuts::-webkit-scrollbar-thumb {
+.container-router::-webkit-scrollbar-thumb {
   background-color: var(--secondary);
 }
 
