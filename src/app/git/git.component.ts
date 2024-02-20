@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { EventManager } from '@angular/platform-browser';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
+import { git } from '../constants';
 
 @Component({
   selector: 'app-git',
@@ -9,10 +10,30 @@ import { EventManager } from '@angular/platform-browser';
   templateUrl: './git.component.html',
   styleUrl: './git.component.css',
   host: {
-    class: 'container-shortcuts',
+    class: 'shortcuts',
   },
 })
-export class GitComponent implements AfterViewInit {
+export class GitComponent implements AfterViewInit, OnInit {
+
+  constructor (private title: Title, private meta: Meta, private constants: git){}
+
+  ngOnInit(){
+    this.title.setTitle(this.constants.title);
+    this.meta.addTags([
+      { name: 'description', content: this.constants.description },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: this.constants.url },
+      { name: 'og:title', content: this.constants.title },
+      { name: 'og:description', content: this.constants.description },
+      { name: 'og:image', content: this.constants.image },
+      { name: 'twitter:card', content: this.constants.twitterCard },
+      { name: 'twitter:url', content: this.constants.url },
+      { name: 'twitter:title', content: this.constants.title },
+      { name: 'twitter:description', content: this.constants.description },
+      { name: 'twitter:image', content: this.constants.image },
+    ]);
+  }
+  
   @ViewChild('scroll') scrollElement: ElementRef | undefined;
 
   ngAfterViewInit(): void {

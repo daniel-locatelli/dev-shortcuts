@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
+import { bash } from '../constants';
 
 @Component({
   selector: 'app-bash',
@@ -9,15 +10,28 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './bash.component.html',
   styleUrl: './bash.component.css',
   host: {
-    class: 'container-shortcuts',
+    class: 'shortcuts',
   },
 })
 export class BashComponent implements AfterViewInit, OnInit {
 
-  constructor (private title: Title){}
+  constructor (private title: Title, private meta: Meta, private constants: bash ){}
 
   ngOnInit(){
-    this.title.setTitle("Quickeys | Bash Commands");
+    this.title.setTitle(this.constants.title);
+    this.meta.addTags([
+      { name: 'description', content: this.constants.description },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: this.constants.url },
+      { name: 'og:title', content: this.constants.title },
+      { name: 'og:description', content: this.constants.description },
+      { name: 'og:image', content: this.constants.image },
+      { name: 'twitter:card', content: this.constants.twitterCard },
+      { name: 'twitter:url', content: this.constants.url },
+      { name: 'twitter:title', content: this.constants.title },
+      { name: 'twitter:description', content: this.constants.description },
+      { name: 'twitter:image', content: this.constants.image },
+    ]);
   }
 
   // Automatic focus after view init (to allow to navigate with arrows up and down)

@@ -142,12 +142,15 @@ footer {
 }
 
 .container-shortcuts {
+  display: flex;
   overflow-y: auto;
-  width: 100%;
+}
+
+.shortcuts {
+  height: max-content;
   -webkit-column-count: 3;
   -moz-column-count: 3;
   column-count: 3;
-  column-fill: auto;
   column-gap: var(--layout-padding);
   padding: var(--layout-padding);
   & h2 {
@@ -157,10 +160,10 @@ footer {
   }
 }
 
-.container-shortcuts .row:nth-child(even) {
+.shortcuts .row:nth-child(even) {
   background-color: var(--bg-tertiary);
 }
-.container-shortcuts .row:nth-child(odd) {
+.shortcuts .row:nth-child(odd) {
   background-color: var(--bg-secondary);
 }
 
@@ -252,7 +255,7 @@ span + span {
 }
 
 @media screen and (max-width: 950px) {
-  .container-shortcuts {
+  .shortcuts {
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
@@ -270,7 +273,7 @@ span + span {
     }
   }
   
-  .container-shortcuts {
+  .shortcuts {
     padding: 0;
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
