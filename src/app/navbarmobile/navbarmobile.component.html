@@ -7,7 +7,7 @@
   <nav [class.nav-active]="navbarVisible">
     <ul>
       <li title="Bash Commands" class="shortcut" [class.active-nav]="isRouteActive('/bash')">
-        <a routerLink="bash" class="linkmobile" tabIndex="-1" (click)="onClick()">
+        <a routerLink="bash" class="linkmobile" tabIndex="-1" (click)="onClick()" aria-label="Go to Bash Commands page">
           <svg class="iconmobile">
             <use xlink:href="assets/icons.svg#bash" />
           </svg>
@@ -15,7 +15,7 @@
         </a>
       </li>
       <li title="Windows 11 Shortcuts" class="shortcut" [class.active-nav]="isRouteActive('/windows')">
-        <a routerLink="windows" class="linkmobile" tabIndex="-1" (click)="onClick()">
+        <a routerLink="windows" class="linkmobile" tabIndex="-1" (click)="onClick()" aria-label="Go to Windows 11 Shortcuts page">
           <svg class="iconmobile">
             <use xlink:href="assets/icons.svg#windows" />
           </svg>
@@ -23,7 +23,7 @@
         </a>
       </li>
       <li title="Git Commands" class="shortcut" [class.active-nav]="isRouteActive('/git')">
-        <a routerLink="git" class="linkmobile" tabIndex="-1" (click)="onClick()">
+        <a routerLink="git" class="linkmobile" tabIndex="-1" (click)="onClick()" aria-label="Go to git commands page">
           <svg class="iconmobile">
             <use xlink:href="assets/icons.svg#git" />
           </svg>
@@ -31,7 +31,7 @@
         </a>
       </li>
       <li title="Shortcuts for Visual Studio Code" class="shortcut" [class.active-nav]="isRouteActive('/vscode')">
-        <a routerLink="vscode" class="linkmobile" tabIndex="-1" (click)="onClick()">
+        <a routerLink="vscode" class="linkmobile" tabIndex="-1" (click)="onClick()" aria-label="Go to Shortcuts for Visual Studio Code page">
           <svg class="iconmobile">
             <use xlink:href="assets/icons.svg#vscode" />
           </svg>
@@ -39,7 +39,7 @@
         </a>
       </li>
       <li title="Shortcuts for Google Chrome" class="shortcut" [class.active-nav]="isRouteActive('/chrome')">
-        <a routerLink="chrome" class="linkmobile" tabIndex="-1" (click)="onClick()">
+        <a routerLink="chrome" class="linkmobile" tabIndex="-1" (click)="onClick()" aria-label="Go to Shortcuts for Google Chrome page">
           <svg class="iconmobile">
             <use xlink:href="assets/icons.svg#chrome" />
           </svg>
@@ -47,7 +47,7 @@
         </a>
       </li>
       <li title="Shortcuts for Chrome Dev" class="shortcut" [class.active-nav]="isRouteActive('/chromedev')">
-        <a routerLink="chromedev" class="linkmobile" tabIndex="-1" (click)="onClick()">
+        <a routerLink="chromedev" class="linkmobile" tabIndex="-1" (click)="onClick()" aria-label="Go to Shortcuts for Chrome Dev page">
           <svg class="iconmobile">
             <use xlink:href="assets/icons.svg#chromedev" />
           </svg>
@@ -55,7 +55,7 @@
         </a>
       </li>
       <li title="Shortcuts for Adobe Premiere Pro" class="shortcut" [class.active-nav]="isRouteActive('/premierepro')">
-        <a routerLink="premierepro" class="linkmobile" tabIndex="-1" (click)="onClick()">
+        <a routerLink="premierepro" class="linkmobile" tabIndex="-1" (click)="onClick()" aria-label="Go to Shortcuts for Premiere Pro page">
           <svg class="iconmobile">
             <use xlink:href="assets/icons.svg#premierepro" />
           </svg>
@@ -63,7 +63,7 @@
         </a>
       </li>
       <li title="Shortcuts for After Effects" class="shortcut" [class.active-nav]="isRouteActive('/aftereffects')">
-        <a routerLink="aftereffects" class="linkmobile" tabIndex="-1" (click)="onClick()">
+        <a routerLink="aftereffects" class="linkmobile" tabIndex="-1" (click)="onClick()" aria-label="Go to Shortcuts for After Effects page">
           <svg class="iconmobile">
             <use xlink:href="assets/icons.svg#aftereffects" />
           </svg>
@@ -72,9 +72,9 @@
       </li>
     </ul>
   </nav>
-  <a href="javascript:void(0);" class="hamburger" (click)="onClick()" [class.active-hamburger]="navbarVisible">
-    <span class="line"></span>
-    <span class="line"></span>
-    <span class="line"></span>
+  <a href="javascript:void(0);" class="hamburger" [class.active-hamburger]="navbarVisible" (click)="onClick()" aria-label="Open the menu">
+    <span class="line" aria-hidden="true"></span>
+    <span class="line" aria-hidden="true"></span>
+    <span class="line" aria-hidden="true"></span>
   </a>
 </header>

@@ -1,8 +1,8 @@
 main {
-    display: flex;
-    height: 100svh;
+  display: flex;
+  height: 100svh;
 }
 
 .flexcolumn {
-    flex-direction: column;
+  flex-direction: column;
 }

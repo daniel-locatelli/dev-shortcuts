@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-bash',
@@ -11,9 +12,13 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
     class: 'container-shortcuts',
   },
 })
-export class BashComponent implements AfterViewInit {
+export class BashComponent implements AfterViewInit, OnInit {
 
-  // Check chatGPT for a reusable table component.
+  constructor (private title: Title){}
+
+  ngOnInit(){
+    this.title.setTitle("Quickeys | Bash Commands");
+  }
 
   // Automatic focus after view init (to allow to navigate with arrows up and down)
   @ViewChild('scroll') scrollElement: ElementRef | undefined;
@@ -127,53 +132,4 @@ export class BashComponent implements AfterViewInit {
     { key: 'trap', command: 'Run a command when a signal is set(builtin)' },
     { key: 'source', command: 'Run commands from a file in the current shell' },
   ];
-
-  //   control operator
-  // A token that performs a control function. It is a newline or one of the following: ‘||’, ‘&&’, ‘&’, ‘;’, ‘;;’, ‘;&’, ‘;;&’, ‘|’, ‘|&’, ‘(’, or ‘)’.
-
-  // metacharacter
-  // A character that, when unquoted, separates words. A metacharacter is a space, tab, newline, or one of the following characters: ‘|’, ‘&’, ‘;’, ‘(’, ‘)’, ‘<’, or ‘>’.
-
-  //   Reserved words
-  //   if	then	elif	else	fi	time
-  // for	in	until	while	do	done
-  // case	esac	coproc	select	function
-  // {	}	[[	]]	!
-
-  // ANSI-C Quoting
-  // \a
-  // alert (bell)
-  // \b
-  // backspace
-  // \e
-  // \E
-  // an escape character (not ANSI C)
-  // \f
-  // form feed
-  // \n
-  // newline
-  // \r
-  // carriage return
-  // \t
-  // horizontal tab
-  // \v
-  // vertical tab
-  // \\
-  // backslash
-  // \'
-  // single quote
-  // \"
-  // double quote
-  // \?
-  // question mark
-  // \nnn
-  // the eight-bit character whose value is the octal value nnn (one to three octal digits)
-  // \xHH
-  // the eight-bit character whose value is the hexadecimal value HH (one or two hex digits)
-  // \uHHHH
-  // the Unicode (ISO/IEC 10646) character whose value is the hexadecimal value HHHH (one to four hex digits)
-  // \UHHHHHHHH
-  // the Unicode (ISO/IEC 10646) character whose value is the hexadecimal value HHHHHHHH (one to eight hex digits)
-  // \cx
-  // a control-x character
 }
