@@ -17,21 +17,18 @@ export class VscodeComponent implements AfterViewInit, OnInit {
 
   constructor (private title: Title, private meta: Meta, private constants: vsCode){}
 
-  ngOnInit(){
+  ngOnInit() {
     this.title.setTitle(this.constants.title);
-    this.meta.addTags([
-      { name: 'description', content: this.constants.description },
-      { name: 'og:type', content: 'website' },
-      { name: 'og:url', content: this.constants.url },
-      { name: 'og:title', content: this.constants.title },
-      { name: 'og:description', content: this.constants.description },
-      { name: 'og:image', content: this.constants.image },
-      { name: 'twitter:card', content: this.constants.twitterCard },
-      { name: 'twitter:url', content: this.constants.url },
-      { name: 'twitter:title', content: this.constants.title },
-      { name: 'twitter:description', content: this.constants.description },
-      { name: 'twitter:image', content: this.constants.image },
-    ]);
+    this.meta.updateTag({ name: 'description', content: this.constants.description });
+    this.meta.updateTag({ property: 'og:url', content: this.constants.url });
+    this.meta.updateTag({ property: 'og:title', content: this.constants.title });
+    this.meta.updateTag({ property: 'og:description', content: this.constants.description });
+    this.meta.updateTag({ property: 'og:image', content: this.constants.image });
+    this.meta.updateTag({ property: 'twitter:card', content: this.constants.twitterCard });
+    this.meta.updateTag({ property: 'twitter:url', content: this.constants.url });
+    this.meta.updateTag({ property: 'twitter:title', content: this.constants.title });
+    this.meta.updateTag({ property: 'twitter:description', content: this.constants.description });
+    this.meta.updateTag({ property: 'twitter:image', content: this.constants.image });
   }
 
   @ViewChild('scroll') scrollElement: ElementRef | undefined;

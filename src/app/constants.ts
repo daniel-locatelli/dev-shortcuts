@@ -3,10 +3,13 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class primary {
+export class home {
   public title = 'Quickeys';
   public description =
     'Quickeys helps devs find shortcuts and commands without ever leaving the keyboard. It is useful especially for new devs that are still reaching for the mouse more than they should.';
+    public url = 'https://quickeys.dev/';
+    public image = 'src/assets/quickeys-logo-100.png';
+    public twitterCard = 'Quickeys helps devs find shortcuts and commands without ever leaving the keyboard.';
 }
 
 @Injectable({

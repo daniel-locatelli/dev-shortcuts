@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { home } from '../constants';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -12,11 +14,26 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
     class: 'home',
   },
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements AfterViewInit, OnInit {
+
+  constructor( private title: Title, private meta: Meta, private constants: home){}
+
   public screenWidth!: number;
 
   ngOnInit() {
     this.screenWidth = window.innerWidth;
+
+    this.title.setTitle(this.constants.title);
+    this.meta.updateTag({ name: 'description', content: this.constants.description });
+    this.meta.updateTag({ property: 'og:url', content: this.constants.url });
+    this.meta.updateTag({ property: 'og:title', content: this.constants.title });
+    this.meta.updateTag({ property: 'og:description', content: this.constants.description });
+    this.meta.updateTag({ property: 'og:image', content: this.constants.image });
+    this.meta.updateTag({ property: 'twitter:card', content: this.constants.twitterCard });
+    this.meta.updateTag({ property: 'twitter:url', content: this.constants.url });
+    this.meta.updateTag({ property: 'twitter:title', content: this.constants.title });
+    this.meta.updateTag({ property: 'twitter:description', content: this.constants.description });
+    this.meta.updateTag({ property: 'twitter:image', content: this.constants.image });
   }
 
   onWindowResize() {
