@@ -82,6 +82,8 @@ a {
   text-decoration: none;
 }
 
+
+
 li {
   list-style: none;
 }
@@ -159,6 +161,10 @@ footer {
     font-weight: 400;
     border-bottom: 1px solid white;
   }
+}
+
+.shortcuts a:hover {
+  color: var(--secondary);
 }
 
 .shortcuts .row:nth-child(even) {
