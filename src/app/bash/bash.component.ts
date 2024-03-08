@@ -57,6 +57,7 @@ export class BashComponent implements AfterViewInit, OnInit {
     { key: 'rm', command: 'Remove files or directories' },
     { key: 'touch', command: 'Create an empty file' },
     { key: 'find', command: 'Search for files in a directory hierarchy' },
+    { key: 'find ./ -name "*.exe" -type f -print0', command: 'Will start Find in the current directory, will search by name for files that match the "*.exe" search string. Directories will not be shown because it is searching for files only, with -type f. The print0 argument tells Find to not consider whitespace as the end of a file name.' },
     { key: 'ln', command: 'Create hard or symbolic links' },
     { key: 'stat', command: 'Display file or file system status' },
     { key: 'file', command: 'Determine file type' },
