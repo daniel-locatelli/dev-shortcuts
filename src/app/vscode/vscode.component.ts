@@ -46,6 +46,7 @@ export class VscodeComponent implements AfterViewInit, OnInit {
     { key: 'Ctrl + Shift + W', command: 'Close window/instance' },
     { key: 'Ctrl + ,', command: 'User Settings' },
     { key: 'Ctrl + K  Ctrl + S', command: 'Keyboard Shortcuts' },
+    { key: 'Ctrl + Shift + C', command: 'Open new external terminal'}
   ];
 
   basicEditing: Shortcut[] = [
