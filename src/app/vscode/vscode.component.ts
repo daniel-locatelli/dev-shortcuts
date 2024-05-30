@@ -163,6 +163,7 @@ export class VscodeComponent implements AfterViewInit, OnInit {
     { key: 'Shift + Alt + 0', command: 'Toggle editor layout (horizontal/vertical)' },
     { key: 'Ctrl + = / -', command: 'Zoom in/out' },
     { key: 'Ctrl + B', command: 'Toggle Sidebar visibility' },
+    { key: 'Ctrl + J', command: 'Toggle Panel visibility'},
     { key: 'Ctrl + Shift + E', command: 'Show Explorer / Toggle focus' },
     { key: 'Ctrl + Shift + F', command: 'Show Search' },
     { key: 'Ctrl + Shift + G', command: 'Show Source Control' },
